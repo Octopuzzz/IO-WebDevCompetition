@@ -1,0 +1,16 @@
+<nav class="nav-bar">
+    <div class="nav-logo">
+        <h1>IC Food</h1>
+    </div>
+    <div class="nav-link">
+        <ul class="nav-link-isi">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Recipe</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="nav-button">
+        <button>Sign Up</button>
+    </div>
+</nav>
