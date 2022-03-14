@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <title>IC Food</title>
 </head>
 <body>
     {{-- Navbar --}}
@@ -12,7 +13,7 @@
     {{-- End Navbar --}}
     <div class="container">
         @yield('container')
+    <x-menu></x-menu>
     </div>
-
 </body>
 </html>

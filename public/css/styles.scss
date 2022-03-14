@@ -1,7 +1,279 @@
-.test{
-    background-color: red;
+$color: (
+    "merah": #e2243e,
+    "oren": #ef7b3a,
+);
+
+@mixin flex-box($justify: center, $items: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $items;
 }
-.container
-{
-    background-color:red;
+@mixin flex-box-reverse($justify: center) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $items;
+}
+
+@mixin button-gradient {
+    cursor: pointer;
+    background: linear-gradient(
+        to right,
+        map-get($color, "merah"),
+        map-get($color, "oren")
+    );
+    border: none;
+    padding: 0.6rem 2.5rem;
+    border-radius: 15px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+    &:hover {
+        background: linear-gradient(
+            to left,
+            map-get($color, "merah"),
+            map-get($color, "oren")
+        );
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+// navbar
+.nav-bar {
+    display: flex;
+    box-shadow: 0 0 5px black;
+    padding: 1rem;
+    .nav-logo {
+        flex: 1;
+        text-align: center;
+
+        h1 {
+            background: linear-gradient(
+                map-get($color, "merah"),
+                map-get($color, "oren")
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+    .nav-link {
+        flex: 3;
+        @include flex-box(center, center);
+        .nav-link-isi {
+            @include flex-box(space-between, center);
+            width: 80%;
+            height: 100%;
+            list-style: none;
+            li a {
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: rgba($color: #000000, $alpha: 0.8);
+                font-weight: 500;
+            }
+        }
+    }
+    .nav-button {
+        flex: 1;
+        @include flex-box(center, center);
+        button {
+            @include button-gradient();
+        }
+    }
+}
+
+.hero-section {
+    background-image: url("../assets/ic-food.jpg");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex-box(end, center);
+    .hero-isi {
+        width: 50%;
+        height: 100%;
+        @include flex-box(center, start);
+        flex-direction: column;
+        padding: 2rem;
+        .hero-text {
+            width: 100%;
+            color: white;
+            h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+                line-height: 1.3;
+            }
+            p {
+                font-size: 1.5rem;
+                color: rgba($color: #ffffff, $alpha: 0.8);
+                margin-bottom: 10px;
+            }
+        }
+        .hero-button {
+            @include flex-box(space-between, center);
+            button:first-child {
+                @include button-gradient();
+                margin-right: 1rem;
+            }
+            button:last-child {
+                @include button-gradient();
+            }
+        }
+    }
+}
+// About-section
+.about-container {
+    padding: 3rem;
+    .about-judul {
+        border-bottom: 1px solid map-get($color, "oren");
+        h1 {
+            padding-left: 19.2px;
+            font-size: 2.7rem;
+            span {
+                color: map-get($color, "merah");
+            }
+        }
+    }
+    .about-section {
+        @include flex-box(center, center);
+        padding: 1rem 1.2rem;
+        .about-text {
+            flex: 1;
+            p {
+                font-size: 1.4rem;
+                line-height: 2.5rem;
+            }
+            p:first-child {
+                margin-bottom: 20px;
+            }
+        }
+
+        .about-logo {
+            flex: 1;
+            @include flex-box(center, center);
+            padding: 1rem;
+            font-size: 7rem;
+            font-weight: 600;
+            color: red;
+            background: linear-gradient(
+                map-get($color, "merah"),
+                map-get($color, "oren")
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .powered-by {
+        padding: 1rem;
+        .powered-judul {
+            h1 {
+                padding-left: 19.2px;
+                font-size: 2.7rem;
+                text-align: center;
+                span {
+                    color: map-get($color, "oren");
+                }
+            }
+        }
+        .logo-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1.5rem;
+            padding: 0 2rem;
+            align-items: center;
+        }
+    }
+}
+
+//Menu
+.menu-container {
+    background-color: #e2243e;
+    padding: 1rem;
+    height: 100vh;
+    .menu-header {
+        flex: 1;
+        @include flex-box(space-between, center);
+        h1 {
+            padding: 0 2rem;
+            font-size: large;
+        }
+        .menu-button {
+            @include button-gradient();
+            margin-right: 2rem;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+    border: solid 2px black;
+    .menu-body {
+        border: solid 2px black;
+        .menu-items {
+            // background-color: black;
+            @include flex-box(space-evenly, center);
+            .menu-item {
+                border: solid 2px black;
+                width: 400px;
+            }
+        }
+    }
+}
+
+//Cooking in 3 easy step
+.easy-step-title {
+    span {
+        color: map-get($color, "merah");
+    }
+
+    padding-top: 30px;
+    text-align: center;
+}
+
+.easy-step-container {
+    @include flex-box(center, center);
+    padding: 40px 20px;
+
+    .easy-step-card {
+        @include flex-box(center, center);
+        flex-direction: column;
+        p {
+            text-align: center;
+        }
+
+        .icon-container {
+            width: 30%;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.top-recipes {
+    h1 {
+        text-align: center;
+    }
+    @include flex-box(center, center);
+    flex-direction: column;
+    .recipes-container {
+        .recipes-item {
+            display: flex;
+        }
+    }
 }
