@@ -202,6 +202,7 @@ $color: (
 
 //Menu
 .menu-container {
+    box-sizing: border-box;
     background-color: #e2243e;
     padding: 1rem;
     height: 100vh;
@@ -218,15 +219,42 @@ $color: (
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
     }
-    border: solid 2px black;
     .menu-body {
-        border: solid 2px black;
-        .menu-items {
-            // background-color: black;
+        @include flex-box(space-between, center);
+        flex-direction: column;
+        height: 80%;
+        padding: 2em;
+        .menu-hero {
+            @include flex-box(center, center);
+            background-color: white;
+            border: 2px transparent solid;
+            border-radius: 15px;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+            padding: 2em;
+        }
+        .menu-items-1 {
+            flex: 1;
+            width: 100%;
             @include flex-box(space-evenly, center);
             .menu-item {
-                border: solid 2px black;
-                width: 400px;
+                background-color: white;
+                border: 2px transparent solid;
+                border-radius: 15px;
+                box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+                padding: 2em;
+                @include flex-box(space-evenly, center);
+            }
+        }
+        .menu-items-2 {
+            @include flex-box(space-evenly, center);
+            flex: 1;
+            width: 100%;
+            .menu-item {
+                background-color: white;
+                border: 2px transparent solid;
+                border-radius: 15px;
+                box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+                padding: 2em;
             }
         }
     }

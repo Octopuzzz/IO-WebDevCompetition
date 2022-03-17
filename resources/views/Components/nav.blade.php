@@ -10,7 +10,17 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
-    <div class="nav-button">
-        <button>Sign Up</button>
-    </div>
+    @guest
+        <div class="nav-button">
+            <a href="/login">
+                <button>Sign Up</button>
+            </a>
+        </div>
+    @else
+        <div class="nav-button">
+            <a href="/logout">
+                <button>LogOut</button>
+            </a>
+        </div>
+    @endguest
 </nav>

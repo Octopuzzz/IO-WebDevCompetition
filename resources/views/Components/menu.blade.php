@@ -4,75 +4,97 @@
       <a href="" class="menu-button">See All</a>
     </div>
     <div class="menu-body">
-      <div class="menu-hero">
-        <img src="" alt="">
-        <div class="menu-hero-items">
-            <h2>Makanan</h2>
-            <p>Food has a distinctive taste and comes from various countries, both locally and globally</p>
-              <div class="menu-stars">
-                <i>1 2 3 4 5</i>
-                <span>4.8 (978)</span>
-              </div>
-            <div class="menu-likes">
-              <i class="fa fa-heart"> 2</i>
-              <i>90m</i>
+        <div class="menu-hero">
+            <img src="" alt="">
+            <div class="menu-hero-items">
+                <h2>Makanan</h2>
+                <p>Food has a distinctive taste and comes from various countries, both locally and globally</p>
+                <div class="menu-stars">
+                    <i>1 2 3 4 5</i>
+                    <span>4.8 (978)</span>
+                </div>
+                <div class="menu-likes">
+                    <i class="fa fa-heart"> 2</i>
+                    <i>90m</i>
+                </div>
             </div>
         </div>
-      </div>
-      <div class="menu-items">
-        <div class="menu-item">
-          <div class="menu-item-header">
-            <h3>Chicken</h3>
-          </div>
-            <div class="menu-stars">
-              <i>1 2 3 4 5</i>
-              <span>4.8 (978)</span>
+        <div class="menu-items-1">
+            <div class="menu-item">
+                <div class="">
+                    <img src="" alt="">
+                </div>
+                <div class="menu-item-body">
+                    <div class="menu-item-header">
+                        <h3>Chicken</h3>
+                    </div>
+                    <div class="menu-stars">
+                        <i>1 2 3 4 5</i>
+                        <span>4.8 (978)</span>
+                    </div>
+                    <div class="menu-likes">
+                        <i class="fa fa-heart"> 2</i>
+                        <i>90m</i>
+                    </div>
+                </div>
             </div>
-            <div class="menu-likes">
-              <i class="fa fa-heart"> 2</i>
-              <i>90m</i>
+            <div class="menu-item">
+                <div class="">
+                    <img src="" alt="">
+                </div>
+                <div class="menu-item-body">
+                    <div class="menu-item-header">
+                        <h3>Chicken</h3>
+                    </div>
+                    <div class="menu-stars">
+                        <i>1 2 3 4 5</i>
+                        <span>4.8 (978)</span>
+                    </div>
+                    <div class="menu-likes">
+                        <i class="fa fa-heart"> 2</i>
+                        <i>90m</i>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-header">
-            <h3>Chicken</h3>
-          </div>
-          <div class="menu-stars">
-            <i>1 2 3 4 5</i>
-            <span>4.8 (978)</span>
-          </div>
-          <div class="menu-likes">
-            <i class="fa fa-heart"> 2</i>
-            <i>90m</i>
-          </div>
+        <div class="menu-items-2">
+            <div class="menu-item">
+                <div class="">
+                    <img src="" alt="">
+                </div>
+                <div class="menu-item-body">
+                    <div class="menu-item-header">
+                        <h3>Chicken</h3>
+                    </div>
+                    <div class="menu-stars">
+                        <i>1 2 3 4 5</i>
+                        <span>4.8 (978)</span>
+                    </div>
+                    <div class="menu-likes">
+                        <i class="fa fa-heart"> 2</i>
+                        <i>90m</i>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="">
+                    <img src="" alt="">
+                </div>
+                <div class="menu-item-body">
+                    <div class="menu-item-header">
+                        <h3>Chicken</h3>
+                    </div>
+                    <div class="menu-stars">
+                        <i>1 2 3 4 5</i>
+                        <span>4.8 (978)</span>
+                    </div>
+                    <div class="menu-likes">
+                        <i class="fa fa-heart"> 2</i>
+                        <i>90m</i>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="menu-item">
-          <div class="menu-item-header">
-            <h3>Chicken</h3>
-          </div>
-          <div class="menu-stars">
-            <i>1 2 3 4 5</i>
-            <span>4.8 (978)</span>
-          </div>
-          <div class="menu-likes">
-            <i class="fa fa-heart"> 2</i>
-            <i>90m</i>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="menu-item-header">
-            <h3>Chicken</h3>
-          </div>
-          <div class="menu-stars">
-            <i>1 2 3 4 5</i>
-            <span>4.8 (978)</span>
-          </div>
-          <div class="menu-likes">
-            <i class="fa fa-heart"> 2</i>
-            <i>90m</i>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
