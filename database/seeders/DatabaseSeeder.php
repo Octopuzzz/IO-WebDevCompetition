@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Food;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -21,5 +22,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'IC_Food@gmail.com',
             'password' => bcrypt('123456'),
         ]);
+
+        // Food::create([
+        //     'categoryID'
+        // ]);
     }
 }
