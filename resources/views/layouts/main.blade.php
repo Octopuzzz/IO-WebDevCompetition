@@ -9,11 +9,11 @@
 </head>
 <body>
     {{-- Navbar --}}
-    <x-nav></x-nav>
+        <x-nav></x-nav>
     {{-- End Navbar --}}
     <div class="container">
         @yield('container')
-    <x-menu></x-menu>
+        <x-menu></x-menu>
     </div>
 </body>
 </html>

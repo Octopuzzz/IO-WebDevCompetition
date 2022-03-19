@@ -6,10 +6,17 @@
 <form action="/register" method="post">
     @csrf
     <div class="login-form-input">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+        <label for="fname">First Name</label>
+        <input type="text" name="first-name" id="fname" value="{{ old('fname') }}" required autocomplete="name" autofocus>
     </div>
-    @error('name')
+    @error('first-name')
+        <div>{{ $message }}</div>
+    @enderror
+    <div class="login-form-input">
+        <label for="lname">Last Name</label>
+        <input type="text" name="last-name" id="lname" value="{{ old('lname') }}" required autocomplete="name" autofocus>
+    </div>
+    @error('last-name')
         <div>{{ $message }}</div>
     @enderror
     <div class="login-form-input">

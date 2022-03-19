@@ -2,10 +2,16 @@
 
 namespace Database\Seeders;
 
-use App\Models\Food;
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Database\Seeders\FoodSeeder;
+use Database\Seeders\LikeSeeder;
+use Database\Seeders\UserSeeder;
+use Database\Seeders\HistorySeeder;
+use Database\Seeders\BookmarkSeeder;
+use Database\Seeders\CategorySeeder;
+use Database\Seeders\IngredientSeeder;
+use Database\Seeders\PvIngredientSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,14 +23,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        User::create([
-            'name' => 'Reagent',
-            'email' => 'IC_Food@gmail.com',
-            'password' => bcrypt('123456'),
+        $this->call([
+            UserSeeder::class,
+            FoodSeeder::class,
+            CategorySeeder::class,
+            PvIngredientSeeder::class,
+            IngredientSeeder::class,
+            HistorySeeder::class,
+            LikeSeeder::class,
+            BookmarkSeeder::class,
         ]);
-
-        // Food::create([
-        //     'categoryID'
-        // ]);
     }
 }
