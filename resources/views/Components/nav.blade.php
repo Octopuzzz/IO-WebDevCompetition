@@ -31,11 +31,19 @@
             </ul>
         </div>
 
+    @guest
         <div class="nav-button">
-            <a href="">
+            <a href="/login">
                 <button>Sign Up</button>
             </a>
         </div>
+    @else
+        <div class="nav-button">
+            <a href="/logout">
+                <button>LogOut</button>
+            </a>
+        </div>
+    @endguest
     </div>
 
 </nav>
