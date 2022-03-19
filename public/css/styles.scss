@@ -93,6 +93,10 @@ $color: (
             @include button-gradient();
         }
     }
+    .nav-responsive,
+    .nav-circle {
+        display: none;
+    }
 }
 
 .hero-section {
@@ -202,31 +206,148 @@ $color: (
 
 //Menu
 .menu-container {
-    background-color: #e2243e;
-    padding: 1rem;
-    height: 100vh;
+    background-color: map-get($color, "merah");
+    padding: 2rem;
+    height: 100%;
     .menu-header {
-        flex: 1;
+        width: 100%;
+        padding: 1rem;
         @include flex-box(space-between, center);
         h1 {
-            padding: 0 2rem;
-            font-size: large;
+            font-size: 2.5rem;
+            color: white;
         }
-        .menu-button {
-            @include button-gradient();
-            margin-right: 2rem;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        a {
+            .menu-button {
+                @include button-gradient();
+                margin-right: 2rem;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                font-size: 1.2rem;
+            }
         }
     }
-    border: solid 2px black;
     .menu-body {
-        border: solid 2px black;
-        .menu-items {
-            // background-color: black;
-            @include flex-box(space-evenly, center);
-            .menu-item {
-                border: solid 2px black;
-                width: 400px;
+        padding: 0 2rem;
+        .menu-body-utama {
+            width: 100%;
+            padding: 2rem;
+            .menu-body-card {
+                width: 100%;
+                @include flex-box(center, center);
+                .menu-card {
+                    max-width: 70rem;
+                    background-color: #fff;
+                    border-radius: 2rem;
+                    padding: 2rem;
+                    position: relative;
+                    @include flex-box(end, center);
+                    .menu-card-img {
+                        position: absolute;
+                        img {
+                            max-width: 24rem;
+                        }
+                        left: -8rem;
+                    }
+                    .menu-card-text {
+                        width: 80%;
+                        .card-header h1 {
+                            font-size: 3rem;
+                        }
+                        .card-isi {
+                            p {
+                                font-size: 1rem;
+                                color: rgba($color: #000000, $alpha: 0.6);
+                                margin: 0.5rem 0;
+                            }
+                            .card-stats {
+                                display: flex;
+                                margin-bottom: 0.2rem;
+                                .fa-star {
+                                    color: orange;
+                                }
+                                .stats-rating {
+                                    margin-left: 1rem;
+                                    font-size: 1.1rem;
+                                    font-weight: 400;
+                                    color: rgba($color: #000000, $alpha: 0.8);
+                                }
+                            }
+                            .card-like-time {
+                                display: flex;
+                                .fa-heart {
+                                    color: red;
+                                }
+                                font-size: 1.1rem;
+                                .time {
+                                    margin-left: 1rem;
+                                }
+                            }
+                        }
+                    }
+                    .card-arrow-button {
+                        position: absolute;
+                        bottom: 1rem;
+                        right: 2rem;
+                        cursor: pointer;
+                        font-size: 3rem;
+                        & .fa-circle-arrow-right {
+                            color: #000000;
+                            transition: 1s;
+                        }
+                        &:hover .fa-circle-arrow-right {
+                            color: rgba($color: #000000, $alpha: 0.6);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu-body-sekunder {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 30rem);
+        grid-gap: 2.5rem;
+        padding: 2rem;
+        justify-content: space-evenly;
+        .menu-card {
+            @include flex-box(end, center);
+            background-color: #fff;
+            border-radius: 2rem;
+            padding: 1rem;
+            position: relative;
+            .menu-card-img {
+                position: absolute;
+                img {
+                    max-width: 10rem;
+                }
+                left: -1.5rem;
+                top: -1rem;
+            }
+            .menu-card-text {
+                width: 70%;
+                h3 {
+                    font-size: 1.2rem;
+                }
+                .card-stats {
+                    .stats-stars {
+                        .fa-star {
+                            color: orange;
+                        }
+                    }
+                }
+            }
+            .card-arrow-button {
+                position: absolute;
+                bottom: 1rem;
+                right: 2rem;
+                cursor: pointer;
+                font-size: 2rem;
+                & .fa-circle-arrow-right {
+                    color: #000000;
+                    transition: 1s;
+                }
+                &:hover .fa-circle-arrow-right {
+                    color: rgba($color: #000000, $alpha: 0.6);
+                }
             }
         }
     }
@@ -265,15 +386,377 @@ $color: (
     }
 }
 
-.top-recipes {
-    h1 {
-        text-align: center;
-    }
+.top-recipes-container {
     @include flex-box(center, center);
-    flex-direction: column;
-    .recipes-container {
-        .recipes-item {
+    width: 100%;
+    background-color: map-get($color, "merah");
+    padding: 1rem;
+    .top-recipes {
+        width: 40%;
+        h1 {
+            text-align: center;
+            padding: 1rem;
+            font-size: 2.5rem;
+            color: white;
+        }
+        @include flex-box(center, center);
+        flex-direction: column;
+        .recipes-container {
             display: flex;
+            flex-direction: column;
+            width: 100%;
+            border: 5px solid white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            .recipes-item {
+                @include flex-box(center, center);
+                padding: 10px 30px;
+                background: white;
+                margin: 1rem 0;
+                width: 100%;
+                border-radius: 10px;
+                font-size: 1.5rem;
+                .recipes-item-title {
+                    padding: 0 20px;
+                }
+
+                button {
+                    padding: 5px 20px;
+                    border-radius: 15px;
+                    border: 0px;
+                }
+            }
+        }
+    }
+}
+
+.form-container {
+    @include flex-box(center, center);
+    padding: 3rem;
+    .form {
+        width: 60%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+        padding: 1rem;
+        border-radius: 1rem;
+        .form-header {
+            padding: 1rem;
+            h1 {
+                font-size: 2.5rem;
+                text-align: center;
+                text-transform: uppercase;
+                span {
+                    color: map-get($color, "merah");
+                }
+            }
+        }
+
+        .form-body {
+            padding: 0 1rem;
+            .form-item {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0.5rem;
+
+                label {
+                    font-size: 1.2rem;
+                    color: rgba(0, 0, 0, 0.6);
+                    font-weight: 300;
+                    margin-bottom: 3px;
+                }
+                input,
+                textarea {
+                    padding: 0.5rem;
+                    border-radius: 0.4rem;
+                    border: 1px solid rgba(0, 0, 0, 0.6);
+                    font-size: 0.8rem;
+                    color: rgba($color: #000000, $alpha: 0.8);
+                }
+            }
+
+            .form-button {
+                padding: 0.5rem 2rem;
+                color: white;
+                background-color: map-get($color, "merah");
+                border: 1px solid rgba($color: #000000, $alpha: 0.8);
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                transition: 0.5s;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+// footer
+.footer {
+    background-color: map-get($color, "merah");
+    padding: 2rem;
+    @include flex-box(space-between, center);
+    color: white;
+    .footer-text {
+        span {
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+    }
+    .footer-media {
+        ul {
+            .fa-instagram,
+            .fa-twitter,
+            .fa-linkedin,
+            .fa-facebook,
+            .fa-youtube {
+                margin: 0 10px;
+                font-size: 1.5rem;
+                transition: 0.5s;
+                cursor: pointer;
+                &:hover {
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    // hero
+    .hero-section {
+        background-position: right;
+        .hero-isi {
+            width: 100%;
+            @include flex-box(center, center);
+            .hero-text {
+                text-align: center;
+                h1 {
+                    font-size: 4rem;
+                }
+                p {
+                    font-size: 2rem;
+                    margin: 1rem 0;
+                }
+            }
+            .hero-button {
+                button:first-child,
+                button:last-child {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    // about
+    .about-container {
+        .about-judul {
+            text-align: center;
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
+        .about-section {
+            flex-direction: column-reverse;
+            .about-text {
+                text-align: start;
+            }
+        }
+        .powered-by {
+            .logo-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    // menu
+    .menu-container {
+        .menu-body {
+            padding: 0;
+            .menu-body-utama {
+                display: none;
+            }
+        }
+    }
+
+    // top recipes container
+    .top-recipes-container {
+        .top-recipes {
+            width: 100%;
+        }
+    }
+    // contact us
+    .form-container {
+        padding: 2rem;
+        .form {
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    // Navbar
+    .nav-bar {
+        .nav-logo {
+            flex: 1;
+            h1 {
+                font-size: 1.2rem;
+                text-align: start;
+            }
+        }
+        .nav-circle {
+            display: flex;
+            flex: 1;
+            @include flex-box(end, center);
+            .circle {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                border-radius: 20px;
+                background: linear-gradient(
+                    to right bottom,
+                    map-get($color, "merah"),
+                    map-get($color, "oren")
+                );
+            }
+        }
+        .nav-link {
+            display: none;
+        }
+        .nav-button {
+            display: none;
+        }
+    }
+
+    .hero-section {
+        .hero-isi {
+            .hero-text {
+                h1 {
+                    font-size: 2.3rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+            .hero-button {
+                button:first-child,
+                button:last-child {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    .about-container {
+        .about-judul {
+            h1 {
+                font-size: 2.7rem;
+            }
+        }
+        .about-section {
+            flex-direction: column-reverse;
+            .about-logo {
+                font-size: 3.5rem;
+            }
+
+            .about-text {
+                text-align: center;
+                p {
+                    font-size: 1rem;
+                    line-height: normal;
+                }
+            }
+        }
+        .powered-by {
+            .logo-container {
+                grid-template-columns: 1fr;
+
+                .logo {
+                    width: 70%;
+                    margin: auto;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    // menu
+    .menu-container {
+        .menu-header {
+            padding: 0.2rem;
+            flex-direction: column;
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+            a {
+                .menu-button {
+                    font-size: 1rem;
+                    margin: 1rem 0;
+                }
+            }
+        }
+        .menu-body-sekunder {
+            padding: 1rem;
+            grid-template-columns: repeat(auto-fit, 25rem);
+        }
+    }
+
+    .easy-step-container {
+        flex-direction: column;
+    }
+
+    .top-recipes-container {
+        .top-recipes {
+            width: 100%;
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+        .recipes-container {
+            .recipes-item {
+                p {
+                    font-size: 1rem;
+                }
+                button {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    .form-container {
+        .form {
+            width: 100%;
+            .form-header {
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+            .form-body {
+                .form-item {
+                    label {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        .footer-text {
+            span {
+                font-size: 0.7rem;
+            }
+        }
+
+        .footer-media {
+            ul {
+                .fa-instagram,
+                .fa-twitter,
+                .fa-linkedin,
+                .fa-facebook,
+                .fa-youtube {
+                    font-size: 0.7rem;
+                }
+            }
         }
     }
 }

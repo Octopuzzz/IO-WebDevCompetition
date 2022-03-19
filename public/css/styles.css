@@ -107,6 +107,11 @@
   background: linear-gradient(to left, #e2243e, #ef7b3a);
 }
 
+.nav-bar .nav-responsive,
+.nav-bar .nav-circle {
+  display: none;
+}
+
 .hero-section {
   background-image: url("../assets/ic-food.jpg");
   width: 100%;
@@ -308,15 +313,13 @@
 
 .menu-container {
   background-color: #e2243e;
-  padding: 1rem;
-  height: 100vh;
-  border: solid 2px black;
+  padding: 2rem;
+  height: 100%;
 }
 
 .menu-container .menu-header {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 100%;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,11 +332,11 @@
 }
 
 .menu-container .menu-header h1 {
-  padding: 0 2rem;
-  font-size: large;
+  font-size: 2.5rem;
+  color: white;
 }
 
-.menu-container .menu-header .menu-button {
+.menu-container .menu-header a .menu-button {
   cursor: pointer;
   background: -webkit-gradient(linear, left top, right top, from(#e2243e), to(#ef7b3a));
   background: linear-gradient(to right, #e2243e, #ef7b3a);
@@ -348,32 +351,193 @@
   margin-right: 2rem;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 1.2rem;
 }
 
-.menu-container .menu-header .menu-button:hover {
+.menu-container .menu-header a .menu-button:hover {
   background: -webkit-gradient(linear, right top, left top, from(#e2243e), to(#ef7b3a));
   background: linear-gradient(to left, #e2243e, #ef7b3a);
 }
 
 .menu-container .menu-body {
-  border: solid 2px black;
+  padding: 0 2rem;
 }
 
-.menu-container .menu-body .menu-items {
+.menu-container .menu-body .menu-body-utama {
+  width: 100%;
+  padding: 2rem;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.menu-container .menu-body .menu-items .menu-item {
-  border: solid 2px black;
-  width: 400px;
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card {
+  max-width: 70rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-img {
+  position: absolute;
+  left: -8rem;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-img img {
+  max-width: 24rem;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-text {
+  width: 80%;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-text .card-header h1 {
+  font-size: 3rem;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-text .card-isi p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0.5rem 0;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-text .card-isi .card-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.2rem;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-text .card-isi .card-stats .fa-star {
+  color: orange;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-text .card-isi .card-stats .stats-rating {
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-text .card-isi .card-like-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.1rem;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-text .card-isi .card-like-time .fa-heart {
+  color: red;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-text .card-isi .card-like-time .time {
+  margin-left: 1rem;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .card-arrow-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .card-arrow-button .fa-circle-arrow-right {
+  color: #000000;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .card-arrow-button:hover .fa-circle-arrow-right {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.menu-container .menu-body-sekunder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (30rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 30rem);
+  grid-gap: 2.5rem;
+  padding: 2rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.menu-container .menu-body-sekunder .menu-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.menu-container .menu-body-sekunder .menu-card .menu-card-img {
+  position: absolute;
+  left: -1.5rem;
+  top: -1rem;
+}
+
+.menu-container .menu-body-sekunder .menu-card .menu-card-img img {
+  max-width: 10rem;
+}
+
+.menu-container .menu-body-sekunder .menu-card .menu-card-text {
+  width: 70%;
+}
+
+.menu-container .menu-body-sekunder .menu-card .menu-card-text h3 {
+  font-size: 1.2rem;
+}
+
+.menu-container .menu-body-sekunder .menu-card .menu-card-text .card-stats .stats-stars .fa-star {
+  color: orange;
+}
+
+.menu-container .menu-body-sekunder .menu-card .card-arrow-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.menu-container .menu-body-sekunder .menu-card .card-arrow-button .fa-circle-arrow-right {
+  color: #000000;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.menu-container .menu-body-sekunder .menu-card .card-arrow-button:hover .fa-circle-arrow-right {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .easy-step-title {
@@ -428,7 +592,23 @@
   margin-bottom: 5px;
 }
 
-.top-recipes {
+.top-recipes-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #e2243e;
+  padding: 1rem;
+}
+
+.top-recipes-container .top-recipes {
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,13 +624,377 @@
           flex-direction: column;
 }
 
-.top-recipes h1 {
+.top-recipes-container .top-recipes h1 {
   text-align: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+  color: white;
 }
 
-.top-recipes .recipes-container .recipes-item {
+.top-recipes-container .top-recipes .recipes-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  border: 5px solid white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.top-recipes-container .top-recipes .recipes-container .recipes-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 30px;
+  background: white;
+  margin: 1rem 0;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+.top-recipes-container .top-recipes .recipes-container .recipes-item .recipes-item-title {
+  padding: 0 20px;
+}
+
+.top-recipes-container .top-recipes .recipes-container .recipes-item button {
+  padding: 5px 20px;
+  border-radius: 15px;
+  border: 0px;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+}
+
+.form-container .form {
+  width: 60%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.form-container .form .form-header {
+  padding: 1rem;
+}
+
+.form-container .form .form-header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-container .form .form-header h1 span {
+  color: #e2243e;
+}
+
+.form-container .form .form-body {
+  padding: 0 1rem;
+}
+
+.form-container .form .form-body .form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.form-container .form .form-body .form-item label {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 300;
+  margin-bottom: 3px;
+}
+
+.form-container .form .form-body .form-item input,
+.form-container .form .form-body .form-item textarea {
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.form-container .form .form-body .form-button {
+  padding: 0.5rem 2rem;
+  color: white;
+  background-color: #e2243e;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.form-container .form .form-body .form-button:hover {
+  opacity: 0.8;
+}
+
+.footer {
+  background-color: #e2243e;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.footer .footer-text span {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.footer .footer-media ul .fa-instagram,
+.footer .footer-media ul .fa-twitter,
+.footer .footer-media ul .fa-linkedin,
+.footer .footer-media ul .fa-facebook,
+.footer .footer-media ul .fa-youtube {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.footer .footer-media ul .fa-instagram:hover,
+.footer .footer-media ul .fa-twitter:hover,
+.footer .footer-media ul .fa-linkedin:hover,
+.footer .footer-media ul .fa-facebook:hover,
+.footer .footer-media ul .fa-youtube:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-section {
+    background-position: right;
+  }
+  .hero-section .hero-isi {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero-section .hero-isi .hero-text {
+    text-align: center;
+  }
+  .hero-section .hero-isi .hero-text h1 {
+    font-size: 4rem;
+  }
+  .hero-section .hero-isi .hero-text p {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  .hero-section .hero-isi .hero-button button:first-child,
+  .hero-section .hero-isi .hero-button button:last-child {
+    font-size: 1.5rem;
+  }
+  .about-container .about-judul {
+    text-align: center;
+  }
+  .about-container .about-judul h1 {
+    font-size: 4rem;
+  }
+  .about-container .about-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .about-container .about-section .about-text {
+    text-align: start;
+  }
+  .about-container .powered-by .logo-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-container .menu-body {
+    padding: 0;
+  }
+  .menu-container .menu-body .menu-body-utama {
+    display: none;
+  }
+  .top-recipes-container .top-recipes {
+    width: 100%;
+  }
+  .form-container {
+    padding: 2rem;
+  }
+  .form-container .form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .nav-bar .nav-logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .nav-bar .nav-logo h1 {
+    font-size: 1.2rem;
+    text-align: start;
+  }
+  .nav-bar .nav-circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-bar .nav-circle .circle {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: -webkit-gradient(linear, left top, right bottom, from(#e2243e), to(#ef7b3a));
+    background: linear-gradient(to right bottom, #e2243e, #ef7b3a);
+  }
+  .nav-bar .nav-link {
+    display: none;
+  }
+  .nav-bar .nav-button {
+    display: none;
+  }
+  .hero-section .hero-isi .hero-text h1 {
+    font-size: 2.3rem;
+  }
+  .hero-section .hero-isi .hero-text p {
+    font-size: 1rem;
+  }
+  .hero-section .hero-isi .hero-button button:first-child,
+  .hero-section .hero-isi .hero-button button:last-child {
+    font-size: 0.8rem;
+  }
+  .about-container .about-judul h1 {
+    font-size: 2.7rem;
+  }
+  .about-container .about-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .about-container .about-section .about-logo {
+    font-size: 3.5rem;
+  }
+  .about-container .about-section .about-text {
+    text-align: center;
+  }
+  .about-container .about-section .about-text p {
+    font-size: 1rem;
+    line-height: normal;
+  }
+  .about-container .powered-by .logo-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-container .powered-by .logo-container .logo {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .menu-container .menu-header {
+    padding: 0.2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu-container .menu-header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .menu-container .menu-header a .menu-button {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  .menu-container .menu-body-sekunder {
+    padding: 1rem;
+    -ms-grid-columns: (25rem)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 25rem);
+  }
+  .easy-step-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .top-recipes-container .top-recipes {
+    width: 100%;
+  }
+  .top-recipes-container .top-recipes h1 {
+    font-size: 1.5rem;
+  }
+  .top-recipes-container .recipes-container .recipes-item p {
+    font-size: 1rem;
+  }
+  .top-recipes-container .recipes-container .recipes-item button {
+    font-size: 0.8rem;
+  }
+  .form-container .form {
+    width: 100%;
+  }
+  .form-container .form .form-header h1 {
+    font-size: 2rem;
+  }
+  .form-container .form .form-body .form-item label {
+    font-size: 0.9rem;
+  }
+  .footer .footer-text span {
+    font-size: 0.7rem;
+  }
+  .footer .footer-media ul .fa-instagram,
+  .footer .footer-media ul .fa-twitter,
+  .footer .footer-media ul .fa-linkedin,
+  .footer .footer-media ul .fa-facebook,
+  .footer .footer-media ul .fa-youtube {
+    font-size: 0.7rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
