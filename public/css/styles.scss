@@ -521,6 +521,28 @@ $color: (
     }
 }
 
+// Login Page
+.login-container {
+    display: flex;
+    .login-form {
+        height: 100vh;
+        width: 50%;
+        @include flex-box(center, center);
+        flex-direction: column;
+        .login-form-body {
+            width: 100%;
+            .login-form-input {
+                label {
+                    display: block;
+                }
+                .input-box {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 768px) {
     // hero
     .hero-section {
@@ -619,6 +641,25 @@ $color: (
                 );
             }
         }
+
+        .nav-responsive {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            background-color: rgba($color: #e2243e, $alpha: 0.8);
+            height: 100vh;
+            z-index: 1000;
+            .nav-link {
+                padding: 1rem;
+                .nav-link-isi {
+                    @include flex-box("space-evenly", "center");
+                    flex-direction: column;
+                }
+            }
+        }
+
         .nav-link {
             display: none;
         }
@@ -760,3 +801,4 @@ $color: (
         }
     }
 }
+//

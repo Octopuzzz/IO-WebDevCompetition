@@ -36,5 +36,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

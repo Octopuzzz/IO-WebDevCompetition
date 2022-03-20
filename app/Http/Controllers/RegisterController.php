@@ -20,7 +20,7 @@ class RegisterController extends Controller
         $validateData = $request->validate([
             'first-name'  => 'required',
             'last-name'  => 'required',
-            'email' => 'required|email:dns,rfc|unique:users',
+            'email' => 'required|email:dns|unique:users',
             'password' => 'required|confirmed'
         ]);
         $validateData['password'] = Hash::make($validateData['password']);

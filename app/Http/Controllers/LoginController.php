@@ -21,7 +21,7 @@ class LoginController extends Controller
         ]);
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/')->with('success', 'alalala');
+            return redirect()->intended('/dashboard')->with('success', 'Login Successful !');
         }
         return back()->with([
             'LogErr' => 'email seems not right !'
