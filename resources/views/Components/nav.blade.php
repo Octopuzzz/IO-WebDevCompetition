@@ -35,12 +35,12 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Recipe</a></li>
                 <li><a href="#">Contact</a></li>
+                <li class="nav-sign-mobile">
+                    <a href="">
+                        <button>Sign Up</button>
+                    </a>
+                </li>
             </ul>
-        </div>
-        <div class="nav-button">
-            <a href="">
-                <button>Sign Up</button>
-            </a>
         </div>
     </div>
 

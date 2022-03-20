@@ -524,21 +524,79 @@ $color: (
 // Login Page
 .login-container {
     display: flex;
+    overflow: hidden;
+    height: 100vh;
     .login-form {
-        height: 100vh;
         width: 50%;
+        padding: 1rem;
+        flex: 1;
         @include flex-box(center, center);
         flex-direction: column;
+        .login-form-header {
+            h1 {
+                .ic {
+                    color: map-get($color, "merah");
+                }
+                .food {
+                    color: map-get($color, "oren");
+                }
+            }
+        }
         .login-form-body {
-            width: 100%;
+            width: 80%;
+            margin: 20px 0;
             .login-form-input {
-                label {
+                .text-input-box {
                     display: block;
+                    font-size: 1.3rem;
+                    margin: 10px 0;
+                    font-weight: 600;
                 }
                 .input-box {
                     width: 100%;
+                    font-size: 1.2rem;
+                    border-radius: 10px;
+                    border: 2px solid;
+                    padding: 0.2rem 1rem;
+                }
+                .login-btn {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 1.2rem;
+                    border-radius: 10px;
+                    color: white;
+                    background-color: black;
+                    border: 1px solid black;
+                    font-weight: 500;
                 }
             }
+            .password {
+                position: relative;
+                span .fa-eye {
+                    position: absolute;
+                    bottom: 0.8rem;
+                    right: 1rem;
+                    cursor: pointer;
+                }
+            }
+
+            .remember-container {
+                @include flex-box(space-between, center);
+                margin: 15px 0;
+            }
+            .register {
+                @include flex-box(center, center);
+                margin: 20px 0;
+                a {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    .login-img {
+        flex: 1;
+        img {
+            width: 100%;
         }
     }
 }
@@ -613,6 +671,9 @@ $color: (
             width: 80%;
         }
     }
+    .login-img {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 576px) {
@@ -634,28 +695,57 @@ $color: (
                 height: 20px;
                 cursor: pointer;
                 border-radius: 20px;
+                transition: 0.7s;
                 background: linear-gradient(
                     to right bottom,
                     map-get($color, "merah"),
                     map-get($color, "oren")
                 );
+                z-index: 1001;
             }
         }
 
         .nav-responsive {
-            display: flex;
+            display: none;
+            flex-direction: column;
             position: fixed;
             top: 0;
-            left: 0;
-            width: 100vw;
-            background-color: rgba($color: #e2243e, $alpha: 0.8);
+            right: 0;
+            width: 80vw;
+            background-color: rgba($color: #ffffff, $alpha: 1);
             height: 100vh;
             z-index: 1000;
+            animation: slideRight 1200ms ease-out;
             .nav-link {
-                padding: 1rem;
+                display: flex;
+                flex-direction: column;
                 .nav-link-isi {
-                    @include flex-box("space-evenly", "center");
+                    display: flex;
+                    height: 80%;
                     flex-direction: column;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    li {
+                        width: 100%;
+                        text-align: center;
+                        margin: 10px 0;
+                        a {
+                            color: black;
+                            font-size: 2rem;
+                            padding: 0.5rem;
+                        }
+                    }
+                    .nav-sign-mobile {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        a {
+                            button {
+                                @include button-gradient();
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -800,5 +890,40 @@ $color: (
             }
         }
     }
+
+    .login-container {
+        .login-form {
+            .login-form-header {
+                h1 {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        .login-img {
+            display: none;
+        }
+    }
 }
-//
+//animation
+
+@keyframes slideRight {
+    from {
+        transform: translateX(500px);
+        opacity: 0.2;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(500px);
+        opacity: 0.2;
+    }
+}
