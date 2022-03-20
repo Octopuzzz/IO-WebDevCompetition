@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    
+
   <div class="about-container ">
       <div class="about-judul">
           <h1>About <span>Us</span> </h1>
