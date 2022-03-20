@@ -10,7 +10,7 @@ class DashboardController extends Controller
 {
     public function dashboard()
     {
-        // @dd(Auth::user());
+
         return view('/Components.dashboard', [
             'title' => 'Dashboard',
             'user' => Auth::User(),
