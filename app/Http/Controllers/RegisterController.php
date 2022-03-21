@@ -12,7 +12,7 @@ class RegisterController extends Controller
     public function register()
     {
         return view('/Components.register', [
-            'status' => 'Register',
+            'title' => 'Register',
         ]);
     }
     public function store(Request $request)

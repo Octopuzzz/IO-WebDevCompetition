@@ -1,7 +1,8 @@
+
 <div class="menu-container">
     <div class="menu-header">
-      <h1>Choose Your Favorite!</h1>
-      <a href=""><button class="menu-button">See All</button></a>
+    <h1>Choose Your Favorite!</h1>
+    <a href="/dashboard"><button class="menu-button">See All</button></a>
     </div>
     <div class="menu-body">
         <div class="menu-body-utama">
@@ -44,8 +45,29 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="menu-body-sekunder">
+                <div class="menu-card">
+                    <div class="menu-card-img">
+                        <img src="./assets/food-1.png" alt="">
+                    </div>
+                    <div class="menu-card-text">
+                        <h3>Makanan</h3>
+                        <div class="card-stats">
+                            <ul class="stats-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </ul>
+                            <div class="stats-rating">
+                                4.8(978)
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
+                </div>
             <div class="menu-card">
                 <div class="menu-card-img">
                     <img src="./assets/food-1.png" alt="">
@@ -109,31 +131,9 @@
                 </div>
                 <a href="" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
             </div>
-            <div class="menu-card">
-                <div class="menu-card-img">
-                    <img src="./assets/food-1.png" alt="">
-                </div>
-                <div class="menu-card-text">
-                    <h3>Makanan</h3>
-                    <div class="card-stats">
-                        <ul class="stats-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </ul>
-                        <div class="stats-rating">
-                            4.8(978)
-                        </div>
-                    </div>
-                </div>
-                <a href="" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
-            </div>
-
         </div>
     </div>
-  </div>
+</div>
 
   <!-- Cook in 3 easy step -->
   <h1 class="easy-step-title"><span>Cooking</span> in 3 Easy Step</h1>

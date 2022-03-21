@@ -10,7 +10,7 @@ class LoginController extends Controller
     public function index()
     {
         return view('/Components.login', [
-            'status' => 'Login'
+            'title' => 'Login'
         ]);
     }
     public function authenticate(Request $request)

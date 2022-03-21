@@ -27,16 +27,17 @@ class FoodSeeder extends Seeder
             <li>3 ikat daun melinjo</li>
             <li>6 ikat daun melinjo</li>
             </ul>',
-            'image' => Hash::make('component-1.png'),
+            'image' => 'food-1.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => Hash::make('component-2.png'),
+            'Cooking_Image' => 'component-2.png',
+            'Cooking_Time' => 85,
             'Rating' => '4,5',
             'Total_Rating' => '978',
         ]);
         Food::create([
             'category_id' => 2,
             'Food_Name' => 'Bayam kalimantan',
-            'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            'Food_Excerpt' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>',
             'Recipes_Excerpt' => '<ul><li>5 ikat daun pandan</li></ul>',
             'Recipes' => '<ul>
             <li>1 ikat daun melinjo</li>
@@ -44,9 +45,10 @@ class FoodSeeder extends Seeder
             <li>3 ikat daun melinjo</li>
             <li>6 ikat daun melinjo</li>
             </ul>',
-            'image' => Hash::make('component-3.png'),
+            'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => Hash::make('component-2.png'),
+            'Cooking_Image' => 'component-2.png',
+            'Cooking_Time' => 90,
             'Rating' => '4,7',
             'Total_Rating' => '278',
         ]);
