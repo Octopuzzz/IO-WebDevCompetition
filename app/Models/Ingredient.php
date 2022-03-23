@@ -9,8 +9,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Ingredient extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
     public function PvIngredient()
     {
-        return $this->belongsTo(PvIngredient::class);
+        return $this->hasMany(PvIngredient::class);
     }
 }

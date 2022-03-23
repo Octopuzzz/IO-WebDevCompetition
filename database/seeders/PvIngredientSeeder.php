@@ -16,6 +16,7 @@ class PvIngredientSeeder extends Seeder
     public function run()
     {
         PvIngredient::create([
+            'Ingredient_ID' => 1,
             'Food_id' => 2,
         ]);
     }

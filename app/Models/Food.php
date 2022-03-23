@@ -18,7 +18,7 @@ class Food extends Model
     ];
     public function PvIngredients()
     {
-        return $this->belongsTo(PvIngredient::class);
+        return $this->hasMany(PvIngredient::class);
     }
     public function Category()
     {
@@ -30,7 +30,7 @@ class Food extends Model
     }
     public function History()
     {
-        return $this->belongsTo(History::class);
+        return $this->hasMany(History::class);
     }
     public function Bookmarks()
     {

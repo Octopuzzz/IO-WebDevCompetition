@@ -110,12 +110,13 @@
             </div>
 
             <div class="menu-body-sekunder">
+                @foreach($foods->slice(1,5) as $food)
                     <div class="menu-card">
                         <div class="menu-card-img">
-                            <img src="./assets/food-1.png" alt="">
+                            <img src="{{ asset('./storage/assets/'.$food->image) }}" alt="">
                         </div>
                         <div class="menu-card-text">
-                            <h3>Makanan</h3>
+                            <h3>{{ $food->Food_Name }}</h3>
                             <div class="card-stats">
                                 <ul class="stats-stars">
                                     <i class="fas fa-star"></i>
@@ -125,75 +126,13 @@
                                     <i class="fas fa-star"></i>
                                 </ul>
                                 <div class="stats-rating">
-                                    4.8(978)
+                                    {{ $food->Rating.' ('.$food->Total_Rating.')'}}
                                 </div>
                             </div>
                         </div>
                         <a href="" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
                     </div>
-                <div class="menu-card">
-                    <div class="menu-card-img">
-                        <img src="./assets/food-1.png" alt="">
-                    </div>
-                    <div class="menu-card-text">
-                        <h3>Makanan</h3>
-                        <div class="card-stats">
-                            <ul class="stats-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </ul>
-                            <div class="stats-rating">
-                                4.8(978)
-                            </div>
-                        </div>
-                    </div>
-                    <a href="" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
-                </div>
-                <div class="menu-card">
-                    <div class="menu-card-img">
-                        <img src="./assets/food-1.png" alt="">
-                    </div>
-                    <div class="menu-card-text">
-                        <h3>Makanan</h3>
-                        <div class="card-stats">
-                            <ul class="stats-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </ul>
-                            <div class="stats-rating">
-                                4.8(978)
-                            </div>
-                        </div>
-                    </div>
-                    <a href="" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
-                </div>
-                <div class="menu-card">
-                    <div class="menu-card-img">
-                        <img src="./assets/food-1.png" alt="">
-                    </div>
-                    <div class="menu-card-text">
-                        <h3>Makanan</h3>
-                        <div class="card-stats">
-                            <ul class="stats-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </ul>
-                            <div class="stats-rating">
-                                4.8(978)
-                            </div>
-                        </div>
-                    </div>
-                    <a href="" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

@@ -11,7 +11,7 @@ class History extends Model
     use HasFactory;
     public function Foods()
     {
-        return $this->hasMany(Food::class);
+        return $this->belongsTo(Food::class);
     }
     public function User()
     {

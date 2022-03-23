@@ -15,10 +15,10 @@ class PvIngredient extends Model
     ];
     public function Foods()
     {
-        return $this->hasOne(Food::class);
+        return $this->BelongsTo(Food::class);
     }
     public function Ingredients()
     {
-        return $this->hasMany(Ingredient::class);
+        return $this->BelongsTo(Ingredient::class);
     }
 }
