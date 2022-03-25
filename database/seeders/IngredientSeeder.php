@@ -16,7 +16,6 @@ class IngredientSeeder extends Seeder
     public function run()
     {
         Ingredient::create([
-            'PvIngredient_id' => 1,
             'image' => 'component-1.png',
             'name' => 'Kapulaga'
         ]);

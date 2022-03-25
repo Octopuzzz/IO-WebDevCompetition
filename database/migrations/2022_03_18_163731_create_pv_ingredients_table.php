@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pv_ingredients', function (Blueprint $table) {
-            $table->id();
+            $table->foreignId('Ingredient_ID');
             $table->foreignId('Food_id');
             $table->timestamps();
         });

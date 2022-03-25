@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('Cooking_Level');
             $table->string('Cooking_Image');
+            $table->integer('Cooking_Time');
             $table->string('Rating')->nullable();
             $table->integer('Total_Rating')->nullable();
             $table->integer('Total_like')->default(0);

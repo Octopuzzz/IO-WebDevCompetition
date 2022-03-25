@@ -35,11 +35,19 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Recipe</a></li>
                 <li><a href="#">Contact</a></li>
-                <li class="nav-sign-mobile">
-                    <a href="">
-                        <button>Sign Up</button>
-                    </a>
-                </li>
+                @guest
+                    <li class="nav-sign-mobile">
+                        <a href="/login">
+                            <button>Sign Up</button>
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-sign-mobile">
+                        <a href="/logout">
+                            <button>Log Out</button>
+                        </a>
+                    </li>
+                @endguest
             </ul>
         </div>
     </div>

@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('ingredients', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('PvIngredient_id');
             $table->string('image')->nullable();
             $table->string('name');
             $table->timestamps();
