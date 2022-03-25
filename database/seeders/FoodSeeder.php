@@ -19,7 +19,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 1,
             'Food_Name' => 'Sayur Babanci',
-            'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            'Food_Excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officia provident tenetur, unde consequatur soluta commodi porro sapiente eos optio sit rerum nihil, eligendi aspernatur voluptates?',
             'Recipes_Excerpt' => '<ul><li>1 ikat daun melinjo</li></ul>',
             'Recipes' => '<ul>
             <li>1 ikat daun melinjo</li>

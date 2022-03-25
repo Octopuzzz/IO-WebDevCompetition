@@ -80,6 +80,7 @@
                             </div>
                             <div class="card-isi">
                                 <p>{{ $foods[0]->Food_Excerpt }}</p>
+
                                 <div class="card-stats">
                                     <ul class="stats-stars">
                                         <i class="fas fa-star"></i>
