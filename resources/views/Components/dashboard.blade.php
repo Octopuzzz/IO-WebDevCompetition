@@ -4,44 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ $title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title></title>
 </head>
 <body>
-    <div class="dashboard-container">
-        <div class="dashboard-form">
-            <div class="dashboard-form-header">
-                <h1>Dashboard</h1>
-            </div>
-            <form class="dashboard-form-body" action="" method="POST">
-                <div class="dashboard-form-input">
-                    <label for="fname">First Name</label>
-                    <input type="text" name="first-name" id="fname" value="{{ $user->first_name }}" required autocomplete="name" autofocus>
-                </div>
-                <div class="dashboard-form-input">
-                    <label for="lname">Last Name</label>
-                    <input type="text" name="last-name" id="lname" value="{{ $user->last_name }}" required autocomplete="name" autofocus>
-                </div>
-                <div class="dashboard-form-input">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" value="{{ $user->email }}" required autocomplete="email">
-                </div>
-                <div class="dashboard-form-input">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required autocomplete="password">
-                </div>
-                <div class="dashboard-form-input">
-                    <button type="submit">Update</button>
-                </div>
-            </form>
+    <section class="dashboard">
+        {{-- IC food--}}
+        <div class="ic-food-dashboard">
+            <h1 class="ic-food">IC <span>Food</span></h1>
 
-            @foreach($foods as $food)
-            {{-- @dd($food->image); --}}
-                <div class="" >
-                    <img src="{{ asset('storage/assets/'.$food->image) }}" alt=""
-                    style="width:300px;">
-                </div>
-            @endforeach
+            <div class="category">
+                <h5 class="category-judul">Category</h5>
+                <ul class="category-isi">
+                    <li class="category-isi-item">
+                        <input type="checkbox" id="kalimantan">
+                        <label for="kalimantan">Kalimantan</label>
+                    </li>
+                    <li class="category-isi-item">
+                        <input type="checkbox" id="sulawesi">
+                        <label for="sulawesi">Sulawesi</label>
+                    </li >
+                    <li class="category-isi-item">
+                        <input type="checkbox" id="java">
+                        <label for="java">Java</label>
+                    </li>
+                    <li class="category-isi-item">
+                        <input type="checkbox" id="sumatera">
+                        <label for="sumatera">Sumatera</label>
+                    </li>
+                    <li class="category-isi-item">
+                        <input type="checkbox" id="papua">
+                        <label for="papua">Papua</label>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+
+        {{--   isi --}}
+        <div class="isi-dashboard">
+            <div class="dashboard-utama">
+                {{-- search --}}
+                    <div class="search">
+                        <input type="text" placeholder="Search by food name">
+                    </div>
+
+                {{-- ads --}}
+                <div class="bookmark-ads">
+                    <div class="ads-img">
+                        <img src="./assets/image-10.png" alt="">
+                    </div>
+                    <div class="ads-text">
+                        <h3>Create Your Own List!!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quod et obcaecati id enim eum exercitationem vel deserunt cumque iusto?</p>
+                    </div>
+                </div>
+                {{-- card --}}
+                <div class="dashboard-card">
+                    <div class="card">
+                        <div class="card-atas">
+                            <div class="card-atas-img">
+                                <img src="./assets/photo.jpg" alt="">
+                            </div>
+                            <div class="card-atas-text">
+                                <h5 class="card-judul">Sayur Asem</h5>
+                                <span class="card-daerah">kalimantan</span>
+                                <ul class="card-stars">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <span class="card-rating">
+                                    4.8(974)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-bawah">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, veniam maiores asperiores perferendis aperiam obcaecati!</p>
+                            <div class="card-ingredients">
+                                <span class="ingredients-judul">Ingredients</span>
+                                <ul class="ingredients-isi">
+                                    <li>...</li>
+                                    <li>...</li>
+                                    <li>...</li>
+                                </ul>
+                            </div>
+                            <div class="button-time">
+                                <button>View Detail</button>
+                                <div class="time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>90 mins</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-atas">
+                            <div class="card-atas-img">
+                                <img src="./assets/photo.jpg" alt="">
+                            </div>
+                            <div class="card-atas-text">
+                                <h5 class="card-judul">Sayur Asem</h5>
+                                <span class="card-daerah">kalimantan</span>
+                                <ul class="card-stars">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <span class="card-rating">
+                                    4.8(974)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-bawah">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, veniam maiores asperiores perferendis aperiam obcaecati!</p>
+                            <div class="card-ingredients">
+                                <span class="ingredients-judul">Ingredients</span>
+                                <ul class="ingredients-isi">
+                                    <li>...</li>
+                                    <li>...</li>
+                                    <li>...</li>
+                                </ul>
+                            </div>
+                            <div class="button-time">
+                                <button>View Detail</button>
+                                <div class="time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>90 mins</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-atas">
+                            <div class="card-atas-img">
+                                <img src="./assets/photo.jpg" alt="">
+                            </div>
+                            <div class="card-atas-text">
+                                <h5 class="card-judul">Sayur Asem</h5>
+                                <span class="card-daerah">kalimantan</span>
+                                <ul class="card-stars">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <span class="card-rating">
+                                    4.8(974)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-bawah">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, veniam maiores asperiores perferendis aperiam obcaecati!</p>
+                            <div class="card-ingredients">
+                                <span class="ingredients-judul">Ingredients</span>
+                                <ul class="ingredients-isi">
+                                    <li>...</li>
+                                    <li>...</li>
+                                    <li>...</li>
+                                </ul>
+                            </div>
+                            <div class="button-time">
+                                <button>View Detail</button>
+                                <div class="time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>90 mins</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-atas">
+                            <div class="card-atas-img">
+                                <img src="./assets/photo.jpg" alt="">
+                            </div>
+                            <div class="card-atas-text">
+                                <h5 class="card-judul">Sayur Asem</h5>
+                                <span class="card-daerah">kalimantan</span>
+                                <ul class="card-stars">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <span class="card-rating">
+                                    4.8(974)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-bawah">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, veniam maiores asperiores perferendis aperiam obcaecati!</p>
+                            <div class="card-ingredients">
+                                <span class="ingredients-judul">Ingredients</span>
+                                <ul class="ingredients-isi">
+                                    <li>...</li>
+                                    <li>...</li>
+                                    <li>...</li>
+                                </ul>
+                            </div>
+                            <div class="button-time">
+                                <button>View Detail</button>
+                                <div class="time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>90 mins</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="dashboard-bookmark">
+                <div class="bookmark-container">
+                    <div class="bookmark-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <h3 class="bookmark-header">Bookmark</h3>
+                    <div class="bookmark-isi">
+                        <a href="">
+                            <div class="bookmark-isi-item">
+                                <div class="bookmark-img">
+                                    <img src="assets/food-1.png" alt="">
+                                </div>
+                                <div class="bookmark-text">
+                                    <h6>Soto Kambing</h6>
+                                    <ul class="bookmark-stars">
+                                        <li class="fas fa-star"></li>
+                                        <li class="fas fa-star"></li>
+                                        <li class="fas fa-star"></li>
+                                        <li class="fas fa-star"></li>
+                                        <li class="fas fa-star"></li>
+                                    </ul>
+                                </div>
+                                <div class="bookmark-trash">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>
 </body>
 </html>

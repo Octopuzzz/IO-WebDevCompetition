@@ -915,6 +915,87 @@
   width: 100%;
 }
 
+.register-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register-container .img-register {
+  width: 50%;
+}
+
+.register-container .img-register img {
+  width: 100%;
+}
+
+.register-container .form-register-container {
+  width: 50%;
+  padding: 40px;
+}
+
+.register-container .form-register-container h1 {
+  color: #ef7b3a;
+}
+
+.register-container .form-register-container .name-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
+}
+
+.register-container .form-register-container .name-row .login-form-input {
+  width: 49%;
+}
+
+.register-container .form-register-container .name-row .login-form-input input {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid;
+  padding: 0.4rem 1rem;
+}
+
+.register-container .form-register-container .register-row {
+  margin: 10px 0;
+}
+
+.register-container .form-register-container .register-row .login-form-input label {
+  display: block;
+}
+
+.register-container .form-register-container .register-row .login-form-input input {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid;
+  padding: 0.4rem 1rem;
+}
+
+.register-container .form-register-container .register-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  font-weight: 500;
+}
+
+.register-container .form-register-container .register-btn:hover {
+  background-color: white;
+  color: black;
+}
+
 @media only screen and (max-width: 768px) {
   .hero-section {
     background-position: right;
@@ -1205,6 +1286,15 @@
   .login-container .login-img {
     display: none;
   }
+  .register-container .img-register {
+    display: none;
+  }
+  .register-container .form-register-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
 }
 
 @-webkit-keyframes slideRight {
@@ -1257,5 +1347,600 @@
             transform: translateX(500px);
     opacity: 0.2;
   }
+}
+
+.dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f6f6f6;
+  overflow: hidden;
+}
+
+.dashboard .ic-food-dashboard {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: white;
+}
+
+.dashboard .ic-food-dashboard h1 {
+  font-size: 2.5rem;
+  padding: 1rem;
+  color: #e2243e;
+}
+
+.dashboard .ic-food-dashboard h1 span {
+  color: #ef7b3a;
+}
+
+.dashboard .ic-food-dashboard .category {
+  padding: 1rem;
+}
+
+.dashboard .ic-food-dashboard .category .category-judul {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ef7b3a;
+  margin-bottom: 10px;
+}
+
+.dashboard .ic-food-dashboard .category .category-isi {
+  list-style: none;
+}
+
+.dashboard .ic-food-dashboard .category .category-isi .category-isi-item {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .ic-food-dashboard .category .category-isi .category-isi-item input[type="checkbox"] {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.dashboard .ic-food-dashboard .category .category-isi .category-isi-item input[type="checkbox"]::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #ef7b3a;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.dashboard .ic-food-dashboard .category .category-isi .category-isi-item input[type="checkbox"]:checked::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.dashboard .ic-food-dashboard .category .category-isi .category-isi-item label {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-left: 10px;
+  margin-top: -4px;
+}
+
+.dashboard .isi-dashboard {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dashboard .isi-dashboard .dashboard-utama {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding: 1rem 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: scroll;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .search input {
+  padding: 0.6rem 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 5rem;
+  font-size: 1rem;
+  color: #f6f6f6;
+  border: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.dashboard .isi-dashboard .dashboard-utama .bookmark-ads {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e2243e;
+  padding: 0.2rem;
+  border-radius: 3rem;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .bookmark-ads .ads-text h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .bookmark-ads .ads-text p {
+  color: white;
+  font-weight: 100;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card {
+  background-color: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 1rem;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-img img {
+  width: 125px;
+  height: 125px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-text .card-judul {
+  font-size: 1.5rem;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-text .card-daerah {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-text .card-stars {
+  list-style: none;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-text .card-stars .fa-star {
+  color: #ef7b3a;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-text .card-rating {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-bawah p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-bawah .card-ingredients .ingredients-judul {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-bawah .card-ingredients .ingredients-isi {
+  padding: 0.5rem 1rem;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-bawah .button-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-bawah .button-time button {
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e2243e), to(#ef7b3a));
+  background: linear-gradient(#e2243e, #ef7b3a);
+  border: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-bawah .button-time button:hover {
+  opacity: 0.8;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-bawah .button-time .time {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-bawah .button-time .time .fa-clock {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container {
+  background-color: #fff;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-icon {
+  padding: 2rem;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-icon .fa-bookmark {
+  font-size: 5rem;
+  color: #c84250;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-header {
+  font-size: 2rem;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi {
+  padding: 1rem;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a {
+  text-decoration: none;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item {
+  background-color: #c84250;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item .bookmark-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item .bookmark-img img {
+  width: 100%;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item .bookmark-text {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item .bookmark-text h6 {
+  color: white;
+  font-size: 1rem;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item .bookmark-text .bookmark-stars {
+  color: #ff9900;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item .bookmark-trash .fa-trash {
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item .bookmark-trash .fa-trash:hover {
+  color: gray;
+}
+
+.dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item:hover {
+  background-color: #e2243e;
+}
+
+.detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.detail .detail-container {
+  width: 80%;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.detail .detail-container .header-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.detail .detail-container .header-detail .detail-card-image {
+  width: 20%;
+  padding: 40px;
+}
+
+.detail .detail-container .header-detail .detail-card-image img {
+  width: 200px;
+  border-radius: 50%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.detail .detail-container .header-detail .detail-attributes {
+  width: 20%;
+}
+
+.detail .detail-container .header-detail .detail-attributes .detail-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.detail .detail-container .header-detail .detail-attributes .detail-icons .detail-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.detail .detail-container .header-detail .detail-descriptions {
+  width: 60%;
+  padding: 40px;
+}
+
+.detail .detail-container .header-detail .detail-descriptions .detail-description-button button {
+  padding: 10px;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(#e2243e), to(#ef7b3a));
+  background: linear-gradient(to right, #e2243e, #ef7b3a);
+  border: none;
+  padding: 0.6rem 2.5rem;
+  border-radius: 15px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+  margin: 20px 0;
+}
+
+.detail .detail-container .header-detail .detail-descriptions .detail-description-button button:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#e2243e), to(#ef7b3a));
+  background: linear-gradient(to left, #e2243e, #ef7b3a);
+}
+
+.detail .detail-container .header-detail .detail-descriptions .detail-description-button button a {
+  text-decoration: none;
+  color: white;
+}
+
+.detail .detail-container .ingredients {
+  padding: 40px;
+}
+
+.detail .detail-container .ingredients .ingredients-image {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (180px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 180px);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.detail .detail-container .ingredients .ingredients-image .ingredient-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.detail .detail-container .ingredients .ingredients-image .ingredient-card .img-ingredient img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+}
+
+.detail .detail-container .step-cook {
+  padding: 0 40px;
+}
+
+.detail .detail-container .restaurant-btn {
+  margin: 20px 40px;
+  padding: 10px;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(#e2243e), to(#ef7b3a));
+  background: linear-gradient(to right, #e2243e, #ef7b3a);
+  border: none;
+  padding: 0.6rem 2.5rem;
+  border-radius: 15px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.detail .detail-container .restaurant-btn:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#e2243e), to(#ef7b3a));
+  background: linear-gradient(to left, #e2243e, #ef7b3a);
 }
 /*# sourceMappingURL=styles.css.map */

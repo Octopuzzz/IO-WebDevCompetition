@@ -601,6 +601,71 @@ $color: (
     }
 }
 
+//register page
+.register-container {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    .img-register {
+        width: 50%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .form-register-container {
+        width: 50%;
+        padding: 40px;
+        h1 {
+            color: map-get($color, "oren");
+        }
+        .name-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            .login-form-input {
+                width: 49%;
+                input {
+                    width: 100%;
+                    border-radius: 10px;
+                    border: 2px solid;
+                    padding: 0.4rem 1rem;
+                }
+            }
+        }
+        .register-row {
+            margin: 10px 0;
+            .login-form-input {
+                label {
+                    display: block;
+                }
+                input {
+                    width: 100%;
+                    border-radius: 10px;
+                    border: 2px solid;
+                    padding: 0.4rem 1rem;
+                }
+            }
+        }
+        .register-btn {
+            cursor: pointer;
+            width: 100%;
+            padding: 5px;
+            margin: 10px 0;
+            border-radius: 10px;
+            color: white;
+            background-color: black;
+            border: 1px solid black;
+            font-weight: 500;
+            &:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 768px) {
     // hero
     .hero-section {
@@ -903,6 +968,17 @@ $color: (
             display: none;
         }
     }
+
+    .register-container {
+        .img-register {
+            display: none;
+        }
+
+        .form-register-container {
+            justify-content: center;
+            width: 100%;
+        }
+    }
 }
 //animation
 
@@ -925,5 +1001,375 @@ $color: (
     to {
         transform: translateX(500px);
         opacity: 0.2;
+    }
+}
+
+// dashboard
+.dashboard {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    .ic-food-dashboard {
+        flex: 1;
+        background-color: white;
+        h1 {
+            font-size: 2.5rem;
+            padding: 1rem;
+            color: map-get($color, "merah");
+            span {
+                color: map-get($color, "oren");
+            }
+        }
+
+        .category {
+            padding: 1rem;
+            .category-judul {
+                font-size: 1.5rem;
+                padding: 0.5rem;
+                border-bottom: 1px solid map-get($color, "oren");
+                margin-bottom: 10px;
+            }
+            .category-isi {
+                list-style: none;
+                .category-isi-item {
+                    padding: 0.5rem;
+                    display: flex;
+                    input[type="checkbox"] {
+                        display: grid;
+                        place-content: center;
+                        appearance: none;
+                        background-color: white;
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid black;
+                        cursor: pointer;
+                    }
+                    input[type="checkbox"]::before {
+                        content: "";
+                        width: 15px;
+                        height: 15px;
+                        background-color: map-get($color, "oren");
+                        opacity: 0;
+                        transform: scale(0);
+                        transition: 0.6s ease-in-out;
+                    }
+                    input[type="checkbox"]:checked::before {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                    label {
+                        color: rgba($color: #000000, $alpha: 0.8);
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                        margin-left: 10px;
+                        margin-top: -4px;
+                    }
+                }
+            }
+        }
+    }
+    .isi-dashboard {
+        flex: 5;
+        padding: 2rem;
+        display: flex;
+        box-sizing: border-box;
+        .dashboard-utama {
+            flex: 3;
+            padding: 1rem 2rem;
+            box-sizing: border-box;
+            overflow: scroll;
+            .search {
+                display: flex;
+                width: 100%;
+                position: relative;
+                margin-bottom: 1rem;
+                input {
+                    padding: 0.6rem 1rem;
+                    flex: 1;
+                    border-radius: 5rem;
+                    font-size: 1rem;
+                    color: #f6f6f6;
+                    border: none;
+                    box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.4);
+                }
+            }
+            .bookmark-ads {
+                width: 100%;
+                @include flex-box(start, center);
+                background-color: map-get($color, "merah");
+                padding: 0.2rem;
+                border-radius: 3rem;
+                .ads-text {
+                    h3 {
+                        color: white;
+                        font-size: 2rem;
+                        margin-bottom: 5px;
+                    }
+                    p {
+                        color: white;
+                        font-weight: 100;
+                        font-size: 1.1rem;
+                        opacity: 0.9;
+                    }
+                }
+            }
+
+            .dashboard-card {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+                gap: 1rem;
+                padding: 1rem;
+                .card {
+                    background-color: white;
+                    border-radius: 1rem;
+                    box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.4);
+                    padding: 0.5rem 1rem;
+                    .card-atas {
+                        display: flex;
+                        .card-atas-img {
+                            flex: 1;
+                            img {
+                                width: 125px;
+                                height: 125px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                            }
+                        }
+                        .card-atas-text {
+                            flex: 1;
+                            @include flex-box(center, start);
+                            flex-direction: column;
+                            .card-judul {
+                                font-size: 1.5rem;
+                            }
+                            .card-daerah {
+                                font-size: 1.1rem;
+                                font-weight: bold;
+                                color: rgba($color: #000000, $alpha: 0.6);
+                            }
+                            .card-stars {
+                                list-style: none;
+                                width: 60%;
+                                @include flex-box(space-between, center);
+                                .fa-star {
+                                    color: map-get($color, "oren");
+                                }
+                            }
+                            .card-rating {
+                                font-size: 0.8rem;
+                                color: rgba($color: #000000, $alpha: 0.6);
+                            }
+                        }
+                    }
+                    .card-bawah {
+                        p {
+                            font-size: 1rem;
+                            margin: 0.5rem 0;
+                        }
+                        .card-ingredients {
+                            .ingredients-judul {
+                                font-weight: bold;
+                                font-size: 1.1rem;
+                            }
+                            .ingredients-isi {
+                                padding: 0.5rem 1rem;
+                            }
+                        }
+                        .button-time {
+                            display: flex;
+                            button {
+                                color: white;
+                                background: linear-gradient(
+                                    map-get($color, "merah"),
+                                    map-get($color, "oren")
+                                );
+                                border: none;
+                                box-shadow: 0 0 5px
+                                    rgba($color: #000000, $alpha: 0.2);
+                                flex: 2;
+                                font-size: 1rem;
+                                padding: 0.5rem;
+                                border-radius: 0.5rem;
+                                cursor: pointer;
+                                transition: 0.5s;
+                                &:hover {
+                                    opacity: 0.8;
+                                }
+                            }
+                            .time {
+                                flex: 1;
+                                @include flex-box(end, center);
+                                .fa-clock {
+                                    color: rgba($color: #000000, $alpha: 0.4);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard-bookmark {
+            flex: 1;
+            padding: 1rem;
+            .bookmark-container {
+                background-color: #fff;
+                height: 100%;
+                @include flex-box(start, center);
+                flex-direction: column;
+                box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.2);
+                border-radius: 2rem;
+                .bookmark-icon {
+                    padding: 2rem;
+                    .fa-bookmark {
+                        font-size: 5rem;
+                        color: #c84250;
+                    }
+                }
+                .bookmark-header {
+                    font-size: 2rem;
+                }
+                .bookmark-isi {
+                    padding: 1rem;
+                    a {
+                        text-decoration: none;
+                        .bookmark-isi-item {
+                            background-color: #c84250;
+                            width: 100%;
+                            margin: 10px 0;
+                            border-radius: 1rem;
+                            transition: 0.5s;
+                            cursor: pointer;
+                            @include flex-box(space-between, center);
+                            padding: 1rem;
+                            .bookmark-img {
+                                flex: 1;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .bookmark-text {
+                                flex: 2;
+                                h6 {
+                                    color: white;
+                                    font-size: 1rem;
+                                }
+                                .bookmark-stars {
+                                    color: #ff9900;
+                                }
+                            }
+                            .bookmark-trash {
+                                .fa-trash {
+                                    color: white;
+                                    font-size: 1.2rem;
+                                    cursor: pointer;
+                                    transition: 0.5s;
+                                    &:hover {
+                                        color: gray;
+                                    }
+                                }
+                            }
+                            &:hover {
+                                background-color: map-get($color, "merah");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// detail
+.detail {
+    @include flex-box(center, center);
+    padding: 20px;
+    .detail-container {
+        width: 80%;
+        background: #ffffff;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        .header-detail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // padding: 40px;
+            .detail-card-image {
+                width: 20%;
+                padding: 40px;
+                img {
+                    width: 200px;
+                    border-radius: 50%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+            .detail-attributes {
+                width: 20%;
+                .detail-icons {
+                    display: flex;
+                    .detail-icon {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 20px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            .detail-descriptions {
+                width: 60%;
+                padding: 40px;
+                .detail-description-button {
+                    button {
+                        padding: 10px;
+                        @include button-gradient();
+                        margin: 20px 0;
+                        a {
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ingredients {
+            padding: 40px;
+            .ingredients-image {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 180px);
+                column-gap: 20px;
+                row-gap: 20px;
+                align-items: center;
+                .ingredient-card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .img-ingredient {
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            object-fit: cover;
+                            border-radius: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .step-cook {
+            padding: 0 40px;
+        }
+
+        .restaurant-btn {
+            margin: 20px 40px;
+            padding: 10px;
+            @include button-gradient();
+        }
     }
 }
