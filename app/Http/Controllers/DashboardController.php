@@ -11,13 +11,17 @@ class DashboardController extends Controller
 {
     public function dashboard()
     {
-        if (!auth()->check()) { 
-            abort(403);
-        }
+
         return view('/Components.dashboard', [
             'title' => 'Dashboard',
             'user' => Auth::User(),
             'foods' => Food::all(),
+        ]);
+    }
+    public function dashboard_detail()
+    {
+        return view('/Components.detail', [
+            'title' => "Detail"
         ]);
     }
 }

@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('food', function (Blueprint $table) {
             $table->id();
             $table->foreignId('Category_id');
+            $table->string('Daerah');
             $table->string('Food_Name');
-            $table->string('Food_Excerpt');
+            $table->longText('Food_Excerpt');
             $table->string('Recipes_Excerpt');
-            $table->string('Recipes');
+            $table->longText('Recipes');
             $table->string('image')->nullable();
             $table->string('Cooking_Level');
             $table->string('Cooking_Image');

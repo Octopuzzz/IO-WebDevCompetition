@@ -111,7 +111,7 @@
             </div>
 
             <div class="menu-body-sekunder">
-                @foreach($foods->slice(1,5) as $food)
+                @foreach($foods->slice(1,3) as $food)
                     <div class="menu-card">
                         <div class="menu-card-img">
                             <img src="{{ asset('./storage/assets/'.$food->image) }}" alt="">
