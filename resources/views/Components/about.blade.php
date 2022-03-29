@@ -2,24 +2,25 @@
 
 @section('container')
     <div class="hero-section">
-        <div class="hero-isi">
+        <div class="hero-isi" data-aos-duration="2000" data-aos="fade-right">
             <div class="hero-text">
                 <h1>Explore Our <br> Indonesian Recipe</h1>
                 <p>Let's Start Cooking With Our Most Iconic <br> Indonesian Food</p>
             </div>
             <div class="hero-button">
-                <button>Our Best Food</button>
-                <button>Our Recies</button>
+                <a href="#top-recipes-id"> <button>Our Best Food</button></a>
+                <a href="#menu-containerid"> <button>Our Recipes</button></a>
+
             </div>
         </div>
     </div>
 
   <div class="about-container ">
-      <div class="about-judul">
+      <div data-aos-duration="2000" data-aos="fade-right" class="about-judul">
           <h1>About <span>Us</span> </h1>
       </div>
       <div class="about-section">
-          <div class="about-text">
+          <div  data-aos-duration="2000" data-aos="fade-right" class="about-text">
               <p>
               Food has a distinctive taste and comes from various countries, both locally and globally. However, local/archipelagic food is still rarely known in the community, one of which is the typical Betawi babanci vegetable.
               </p>
@@ -27,16 +28,16 @@
                 Therefore, we have an idea to build a website application called IC Food as a means of preserving and popularizing Indonesian specialties.
               </p>
           </div>
-          <div class="about-logo">
+          <div  data-aos-duration="2000" data-aos="fade-right" class="about-logo">
               <span>IC FOOD </span>
           </div>
       </div>
 
-      <div class="powered-by">
+      <div  data-aos-duration="2000" data-aos="fade-up" class="powered-by">
           <div class="powered-judul">
               <h1>Powered <span>by</span> </h1>
           </div>
-          <div class="logo-container">
+          <div  data-aos-duration="2000" data-aos="fade-up" class="logo-container">
             <div class="logo">
                  <img  class="w-100" src="assets/image-2.png" alt="test">
             </div>
@@ -62,15 +63,15 @@
   {{-- menu  --}}
 
   @if($foods)
-    <div class="menu-container">
+    <div id="menu-containerid"  class="menu-container">
         <div class="menu-header">
-        <h1>Choose Your Favorite!</h1>
-        <a href="/dashboard"><button class="menu-button">See All</button></a>
+        <h1  data-aos-duration="2000" data-aos="fade-right">Choose Your Favorite!</h1>
+        <a  data-aos-duration="2000" data-aos="fade-right" href="/dashboard"><button class="menu-button">See All</button></a>
         </div>
         <div class="menu-body">
             <div class="menu-body-utama">
                 <div class="menu-body-card">
-                    <div class="menu-card">
+                    <div  data-aos-duration="2000" data-aos="fade-right" class="menu-card">
                         <div class="menu-card-img">
                             <img src="{{ asset('./storage/assets/'.$foods[0]->image) }}" alt="">
                         </div>
@@ -111,8 +112,8 @@
             </div>
 
             <div class="menu-body-sekunder">
-                @foreach($foods->slice(1,3) as $food)
-                    <div class="menu-card">
+                @foreach($foods->slice(1,4) as $food)
+                    <div  data-aos-duration="2000" data-aos="fade-right" class="menu-card">
                         <div class="menu-card-img">
                             <img src="{{ asset('./storage/assets/'.$food->image) }}" alt="">
                         </div>
@@ -139,100 +140,52 @@
     </div>
 
     <!-- Cook in 3 easy step -->
-    <h1 class="easy-step-title"><span>Cooking</span> in 3 Easy Step</h1>
-    <div class="easy-step-container">
+    <h1  data-aos-duration="2000" data-aos="fade-right" class="easy-step-title"><span>Cooking</span> in 3 Easy Step</h1>
+    <div  data-aos-duration="2000" data-aos="fade-up" class="easy-step-container">
 
         <div class="easy-step-card">
-        <div class="icon-container">
-            <img class="w-100" src="assets/component-1.png" alt="">
-        </div>
-        <p class="card-title">Choose Your Favorite</p>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-        </div>
-
-        <div class="easy-step-card">
-        <div class="icon-container">
-            <img class="w-100" src="assets/component-1.png" alt="">
-        </div>
-        <p class="card-title">Follow the Recipe</p>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+            <div class="icon-container">
+                <img class="w-100" src="assets/component-1.png" alt="">
+            </div>
+            <p class="card-title">Choose Your Favorite</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
         </div>
 
         <div class="easy-step-card">
-        <div class="icon-container">
-            <img class="w-100" src="assets/component-1.png" alt="">
+            <div class="icon-container">
+                <img class="w-100" src="assets/component-1.png" alt="">
+            </div>
+            <p class="card-title">Follow the Recipe</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
         </div>
-        <p class="card-title">Enjoy Your Food</p>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+
+        <div class="easy-step-card">
+            <div class="icon-container">
+                <img class="w-100" src="assets/component-1.png" alt="">
+            </div>
+            <p class="card-title">Enjoy Your Food</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
         </div>
     </div>
 
     <!-- Top Recipes of The Week -->
-    <div class="top-recipes-container">
+    <div id="top-recipes-id" class="top-recipes-container">
         <div class="top-recipes">
-        <h1>Top Recipes of The Week</h1>
+        <h1  data-aos-duration="2000" data-aos="fade-right">Top Recipes of The Week</h1>
 
 
         <div class="recipes-container">
-            <div class="recipes-item">
-            <p>1</p>
-            <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-            <button>View More</button>
-            </div>
 
-            <div class="recipes-item">
-            <p>1</p>
-            <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-            <button>View More</button>
+            @foreach($lates->slice(0,10) as $FOOD)
+            <div  data-aos-duration="2000" data-aos="fade-right" class="recipes-item">
+                <p>{{ $FOOD->id }}</p>
+                <p class="recipes-item-title" >{{ $FOOD->Food_Name }}</p>
+                <a href="{{ $FOOD->Food_Name }}">
+                    <button>View More</button>
+                </a>
             </div>
+            @endforeach
 
-            <div class="recipes-item">
-            <p>1</p>
-            <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-            <button>View More</button>
-            </div>
-
-            <div class="recipes-item">
-            <p>1</p>
-            <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-            <button>View More</button>
-            </div>
-
-            <div class="recipes-item">
-            <p>1</p>
-            <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-            <button>View More</button>
-            </div>
-
-            <div class="recipes-item">
-            <p>1</p>
-            <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-            <button>View More</button>
-            </div>
-
-            <div class="recipes-item">
-            <p>1</p>
-            <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-            <button>View More</button>
-            </div>
-
-            <div class="recipes-item">
-            <p>1</p>
-            <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-            <button>View More</button>
-            </div>
-
-            <div class="recipes-item">
-            <p>1</p>
-            <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-            <button>View More</button>
-            </div>
-
-            <div class="recipes-item">
-            <p>1</p>
-            <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-            <button>View More</button>
-            </div>
         </div>
 
 
@@ -240,7 +193,7 @@
     </div>
 
     <!-- Contact Us Form -->
-    <div class="form-container">
+    <div id="contact-id"  data-aos-duration="2000" data-aos="fade-up" class="form-container">
         <div class="form">
             <div class="form-header">
                 <h1>contact<span>us</span></h1>

@@ -13,5 +13,6 @@ class Ingredient extends Model
     public function PvIngredient()
     {
         return $this->hasMany(PvIngredient::class);
+        // return $this->hasMany('App\Models\PvIngredient', 'Ingredient_ID');
     }
 }

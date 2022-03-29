@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Like;
 use App\Models\History;
 use App\Models\Bookmark;
+use App\Models\Provinces;
 use App\Models\Categories;
 use App\Models\PvIngredient;
 use Illuminate\Database\Eloquent\Model;
@@ -16,9 +17,13 @@ class Food extends Model
     protected $guarded = [
         'id'
     ];
+    public function province()
+    {
+        return $this->hasOne(Provinces::class);
+    }
     public function PvIngredients()
     {
-        return $this->hasMany(PvIngredient::class);
+        return $this->hasMany('App\Models\PvIngredient', 'Food_id');
     }
     public function Category()
     {

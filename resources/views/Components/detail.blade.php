@@ -9,8 +9,13 @@
   <title>{{ $title }}</title>
 </head>
 <body>
+
   <div class="detail">
     <div class="detail-container">
+      <div class="x-button">
+        <a href="/dashboard"> <i class="fa-solid fa-xmark"></i></a>
+      </div>
+
       <div class="header-detail">
         <div class="detail-card-image">
           <img src="/assets/photo.jpg" alt="sayur asem">
@@ -102,6 +107,9 @@
 
       <button class="restaurant-btn"> View Restaurant Nearby </button>
     </div>
+
   </div>
+
+
 </body>
 </html>

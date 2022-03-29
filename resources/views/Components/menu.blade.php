@@ -171,60 +171,9 @@
 
 
       <div class="recipes-container">
-        <div class="recipes-item">
-          <p>1</p>
-          <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-          <button>View More</button>
-        </div>
+          {{-- @foreach($variable as $key => $value)
 
-        <div class="recipes-item">
-          <p>1</p>
-          <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-          <button>View More</button>
-        </div>
-
-        <div class="recipes-item">
-          <p>1</p>
-          <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-          <button>View More</button>
-        </div>
-
-        <div class="recipes-item">
-          <p>1</p>
-          <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-          <button>View More</button>
-        </div>
-
-        <div class="recipes-item">
-          <p>1</p>
-          <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-          <button>View More</button>
-        </div>
-
-        <div class="recipes-item">
-          <p>1</p>
-          <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-          <button>View More</button>
-        </div>
-
-        <div class="recipes-item">
-          <p>1</p>
-          <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-          <button>View More</button>
-        </div>
-
-        <div class="recipes-item">
-          <p>1</p>
-          <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-          <button>View More</button>
-        </div>
-
-        <div class="recipes-item">
-          <p>1</p>
-          <p class="recipes-item-title" >Sayur Asem Kalimantan</p>
-          <button>View More</button>
-        </div>
-
+          @endforeach --}}
         <div class="recipes-item">
           <p>1</p>
           <p class="recipes-item-title" >Sayur Asem Kalimantan</p>

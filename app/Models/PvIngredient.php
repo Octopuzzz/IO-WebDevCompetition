@@ -13,15 +13,18 @@ class PvIngredient extends Model
     protected $guarded = [
         'id'
     ];
-    public function getFood($id){
+    public function getFood($id)
+    {
         return;
     }
     public function Foods()
     {
-        return $this->BelongsTo(Food::class);
+        // return $this->belongsTo(Food::class);
+        return $this->belongsTo('App\Models\Food', 'Food_id', 'id');
     }
     public function Ingredients()
     {
-        return $this->BelongsTo(Ingredient::class);
+        // return $this->belongsTo(Ingredient::class);
+        return $this->belongsTo('App\Models\Ingredient', 'Ingredient_ID', 'id');
     }
 }

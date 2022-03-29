@@ -18,7 +18,7 @@ class FoodSeeder extends Seeder
     {
         Food::create([
             'category_id' => 1,
-            'Daerah' => 'Betawi',
+            'Daerah' => 1,
             'Food_Name' => 'Sayur Babanci',
             'Food_Excerpt' => 'Sayur Babanci adalah salah satu hidangan ikonik khas Betawi yang kini mulai langka. Kelangkaan ini disebabkan karena bahan dan rempah-rempah untuk membuat hidangan ini sudah sulit ditemukan di Jakarta.',
             'Recipes_Excerpt' => '1 ikat daun melinjo',
@@ -41,7 +41,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 2,
             'Food_Name' => 'Soto Padang',
-            'Daerah' => 'Padang',
+            'Daerah' => 2,
             'Food_Excerpt' => 'Soto Padang adalah hidangan berkuah kaldu sapi dengan bahan irisan daging sapi yang sudah digoreng kering, bihun (mie dari tepung beras), ditambah perkedel kentang dan dihidangkan panas-panas. ',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => 'Bahan :
@@ -86,7 +86,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 1,
             'Food_Name' => 'Bubur Manado',
-            'Daerah' => 'Manado',
+            'Daerah' => '3',
             'Food_Excerpt' => 'Bubur Manado adalah salah satu kuliner khas dari Manado (Sulawesi Utara). Bahan dasar masakan ini adalah beras yang dicampur sayuran seperti kangkung, daun kemangi, ubi merah/ kuning, dan jagung pipil. Disantap dengan hidangan pelengkap seperti ikan tongkol atau ikan asin bersama sambal dabu-dabu.',
             'Recipes_Excerpt' => '
             Bahan:
@@ -127,7 +127,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 1,
             'Food_Name' => 'Sop Konro',
-            'Daerah' => 'Betawi',
+            'Daerah' => '1',
             'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => 'Bahan :
@@ -173,7 +173,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 1,
             'Food_Name' => 'Kolak surabaya',
-            'Daerah' => 'Betawi',
+            'Daerah' => '1',
             'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => '
@@ -192,7 +192,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 1,
             'Food_Name' => 'Kolak surabaya',
-            'Daerah' => 'Betawi',
+            'Daerah' => '1',
             'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => '
@@ -211,7 +211,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 1,
             'Food_Name' => 'Kolak surabaya',
-            'Daerah' => 'Betawi',
+            'Daerah' => '1',
             'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => '
@@ -230,7 +230,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 1,
             'Food_Name' => 'Kolak surabaya',
-            'Daerah' => 'Betawi',
+            'Daerah' => '4',
             'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => '
@@ -249,7 +249,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 1,
             'Food_Name' => 'Kolak surabaya',
-            'Daerah' => 'Betawi',
+            'Daerah' => '5',
             'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => '

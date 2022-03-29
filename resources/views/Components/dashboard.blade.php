@@ -13,31 +13,16 @@
     <section class="dashboard">
         {{-- IC food--}}
         <div class="ic-food-dashboard">
-            <h1 class="ic-food">IC <span>Food</span></h1>
-
+            <a href="/"> <h1 class="ic-food">IC <span>Food</span></h1></a>
             <div class="category">
                 <h5 class="category-judul">Category</h5>
                 <ul class="category-isi">
-                    <li class="category-isi-item">
-                        <input type="checkbox" id="kalimantan">
-                        <label for="kalimantan">Kalimantan</label>
-                    </li>
-                    <li class="category-isi-item">
-                        <input type="checkbox" id="sulawesi">
-                        <label for="sulawesi">Sulawesi</label>
-                    </li >
-                    <li class="category-isi-item">
-                        <input type="checkbox" id="java">
-                        <label for="java">Java</label>
-                    </li>
-                    <li class="category-isi-item">
-                        <input type="checkbox" id="sumatera">
-                        <label for="sumatera">Sumatera</label>
-                    </li>
-                    <li class="category-isi-item">
-                        <input type="checkbox" id="papua">
-                        <label for="papua">Papua</label>
-                    </li>
+                    @foreach($Categories as $category)
+                        <li class="category-isi-item">
+                            <input type="checkbox" id="kalimantan">
+                            <label for="kalimantan">{{ $category->category_type }}</label>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -57,11 +42,12 @@
                     </div>
                     <div class="ads-text">
                         <h3>Create Your Own List!!</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quod et obcaecati id enim eum exercitationem vel deserunt cumque iusto?</p>
+                        <p>use our bookmark feature to save recipes so you won’t forget them.</p>
                     </div>
                 </div>
                 {{-- card --}}
                 <div class="dashboard-card">
+
                     @foreach($foods as $food)
                     <div class="card">
                         <div class="card-atas">
@@ -92,15 +78,27 @@
                             <div class="card-ingredients">
                                 <span class="ingredients-judul">Ingredients</span>
                                 <ul class="ingredients-isi">
-                                    {{-- <li></li> --}}
+                                    @foreach($food->PvIngredients as $item)
+                                        <li>{{ $item->Ingredients->name }}</li>
+                                    @endforeach
+                                    {{-- {{ $food->PvIngredients }} --}}
                                 </ul>
                             </div>
                             <div class="button-time">
-                                <button>View Detail</button>
+                                <a href="/dashboard/detail"><button>View Detail</button></a>
+
                                 <div class="time">
                                     <i class="fas fa-clock"></i>
-                                    <span>90 mins</span>
+                                    <span>{{ $food->Cooking_Time }}mins</span>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="bookmark-like">
+                            <div class="bookmark-icon">
+                                <i class="fas fa-bookmark"></i>
+                            </div>
+                            <div class="bookmark-heart">
+                                <i class="fas fa-heart"></i>
                             </div>
                         </div>
                     </div>
@@ -123,11 +121,12 @@
                                 <div class="bookmark-text">
                                     <h6>Soto Kambing</h6>
                                     <ul class="bookmark-stars">
-                                        <li class="fas fa-star"></li>
-                                        <li class="fas fa-star"></li>
-                                        <li class="fas fa-star"></li>
-                                        <li class="fas fa-star"></li>
-                                        <li class="fas fa-star"></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+
                                     </ul>
                                 </div>
                                 <div class="bookmark-trash">
@@ -142,5 +141,6 @@
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>
     @endif
+    <script src="js/dashboard.js"></script>
 </body>
 </html>

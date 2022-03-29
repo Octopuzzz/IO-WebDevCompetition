@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Provinces;
 use Illuminate\Database\Seeder;
 use Database\Seeders\FoodSeeder;
 use Database\Seeders\LikeSeeder;
@@ -32,6 +33,7 @@ class DatabaseSeeder extends Seeder
             HistorySeeder::class,
             LikeSeeder::class,
             BookmarkSeeder::class,
+            // Provinces::class,
         ]);
     }
 }

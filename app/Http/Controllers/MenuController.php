@@ -12,6 +12,7 @@ class MenuController extends Controller
         return view('/Components.about', [
             'title' => 'IC Food',
             'foods' => Food::all(),
+            'lates' => Food::latest()->get(),
         ]);
     }
 }

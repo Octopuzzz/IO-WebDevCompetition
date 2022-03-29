@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
 use App\Models\Food;
-use App\Models\PvIngredient;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,6 +19,7 @@ class DashboardController extends Controller
             'title' => 'Dashboard',
             'user' => Auth::User(),
             'foods' => Food::latest()->get(),
+            'Categories' => Categories::all(),
         ]);
     }
     public function dashboard_detail()

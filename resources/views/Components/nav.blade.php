@@ -6,8 +6,8 @@
         <ul class="nav-link-isi">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Recipe</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./dashboard">Recipe</a></li>
+            <li><a href="#contact-id">Contact</a></li>
         </ul>
     </div>
     @guest
