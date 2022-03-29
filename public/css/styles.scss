@@ -1373,3 +1373,65 @@ $color: (
         }
     }
 }
+
+@media screen and (max-width: 1280px) {
+    // dashboard
+    .dashboard {
+        flex-direction: column;
+        height: 100%;
+        overflow: visible;
+        .isi-dashboard {
+            flex-direction: column-reverse;
+            flex: 1;
+            .dashboard-utama {
+                .bookmark-ads {
+                    margin: 1rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    .ads-text {
+                        padding: 1rem;
+                    }
+                }
+                .dashboard-card {
+                    .card {
+                        .card-atas {
+                            .card-atas-img {
+                                border-radius: 1rem;
+                                background-image: url(../assets/photo.jpg);
+                                background-size: cover;
+                                img {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard-bookmark {
+            flex: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .dashboard {
+        .isi-dashboard {
+            padding: 0;
+            .dashboard-utama {
+                .dashboard-card {
+                    align-content: center;
+                    justify-content: center;
+                    .card {
+                        .card-atas {
+                            .card-atas-img {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
