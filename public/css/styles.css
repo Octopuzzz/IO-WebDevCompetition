@@ -1943,4 +1943,67 @@
   background: -webkit-gradient(linear, right top, left top, from(#e2243e), to(#ef7b3a));
   background: linear-gradient(to left, #e2243e, #ef7b3a);
 }
+
+@media screen and (max-width: 1280px) {
+  .dashboard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    overflow: visible;
+  }
+  .dashboard .isi-dashboard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .dashboard .isi-dashboard .dashboard-utama .bookmark-ads {
+    margin: 1rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .dashboard .isi-dashboard .dashboard-utama .bookmark-ads .ads-text {
+    padding: 1rem;
+  }
+  .dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-img {
+    border-radius: 1rem;
+    background-image: url(../assets/photo.jpg);
+    background-size: cover;
+  }
+  .dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-img img {
+    display: none;
+  }
+  .dashboard .dashboard-bookmark {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .dashboard .isi-dashboard {
+    padding: 0;
+  }
+  .dashboard .isi-dashboard .dashboard-utama .dashboard-card {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .card-atas .card-atas-img {
+    display: none;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
