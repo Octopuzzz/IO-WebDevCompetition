@@ -13,6 +13,9 @@ class PvIngredient extends Model
     protected $guarded = [
         'id'
     ];
+    public function getFood($id){
+        return;
+    }
     public function Foods()
     {
         return $this->BelongsTo(Food::class);

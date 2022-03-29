@@ -92,7 +92,7 @@
                             <div class="card-ingredients">
                                 <span class="ingredients-judul">Ingredients</span>
                                 <ul class="ingredients-isi">
-                                    {{ $food->Food_Ingredients }}
+                                    {{-- <li></li> --}}
                                 </ul>
                             </div>
                             <div class="button-time">
