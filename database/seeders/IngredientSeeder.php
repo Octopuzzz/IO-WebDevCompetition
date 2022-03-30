@@ -25,7 +25,7 @@ class IngredientSeeder extends Seeder
         ]);
         Ingredient::create([
             'image' => 'food-1.png',
-            'name' => 'Kapulagas'
+            'name' => 'Kapulaga'
         ]);
     }
 }

@@ -19,8 +19,10 @@
                 <ul class="category-isi">
                     @foreach($Categories as $category)
                         <li class="category-isi-item">
-                            <input type="checkbox" id="kalimantan">
-                            <label for="kalimantan">{{ $category->category_type }}</label>
+                            <input type="checkbox" id="{{ $category->slug }}" data-nilai="kalimantan">
+                            {{-- @if()
+                            @endif --}}
+                            <label for="{{ $category->slug }}">{{ $category->category_type }}</label>
                         </li>
                     @endforeach
                 </ul>
@@ -52,7 +54,7 @@
                     <div class="card">
                         <div class="card-atas">
                             <div class="card-atas-img">
-                                <img src="./assets/photo.jpg" alt="">
+                                <img src="{{ asset('./storage/assets/'.$food->Cooking_Image ) }}" alt="">
                             </div>
                             <div class="card-atas-text">
                                 <h5 class="card-judul">{{ Str::limit($food->Food_Name,20)}}</h5>

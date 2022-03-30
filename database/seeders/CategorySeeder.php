@@ -16,13 +16,16 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Categories::create([
-            'category_type' => 'Sayuran'
+            'category_type' => 'Sayuran',
+            'slug' => 'sayuran'
         ]);
         Categories::create([
-            'category_type' => 'Buah - Buahan'
+            'category_type' => 'Buah - Buahan',
+            'slug' => 'buah-buahan'
         ]);
         Categories::create([
-            'category_type' => 'Junk Foods'
+            'category_type' => 'Junk Foods',
+            'slug' => 'junk-foods'
         ]);
     }
 }

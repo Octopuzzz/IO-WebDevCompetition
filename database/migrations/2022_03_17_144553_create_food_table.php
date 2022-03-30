@@ -22,6 +22,7 @@ return new class extends Migration
             $table->longText('Food_Excerpt');
             $table->string('Recipes_Excerpt');
             $table->longText('Recipes');
+            $table->longText('Cook');
             $table->string('image')->nullable();
             $table->string('Cooking_Level');
             $table->string('Cooking_Image');

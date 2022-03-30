@@ -32,9 +32,10 @@ class FoodSeeder extends Seeder
             2 buah kemiri
             1 buah kunyit
             ',
+            'Cook' => 'b',
             'image' => 'food-1.png',
-            'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'component-2.png',
+            'Cooking_Level' => 'Hard',
+            'Cooking_Image' => 'Sayur Babanci.jpg',
             'Cooking_Time' => 85,
             'Rating' => '4.5',
             'Total_Rating' => '978',
@@ -78,9 +79,10 @@ class FoodSeeder extends Seeder
             - bawang goreng.
             - kecap.
             - cuka.',
+            'Cook' => 'a',
             'image' => 'component-3.png',
-            'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'component-2.png',
+            'Cooking_Level' => 'Medium',
+            'Cooking_Image' => 'Soto Padang.jpg',
             'Cooking_Time' => 90,
             'Rating' => '4.2',
             'Total_Rating' => '147',
@@ -113,16 +115,14 @@ class FoodSeeder extends Seeder
             - 2 batang daun bawang, rajang halus.
             - 1 ikat kangkung, ambil daun dan pucuk mudanya, rajang kasar
             - 1 ikat kecil bayam, ambil daun.
-            - 1 mangkuk kemangi, dari 5 ikat kecil kemangi, ambil daun dan pucuk mudanya saja.
-            Cara memasak :
-            a. Cuci bersih beras,lalu di panci masukkan air, beras, singkong, ubi masak dengan api kecil sampai singkong dan ubi lembut.
-            b. Masukkan bawang putih, bawang merah, daun salam dan serai sambil terus diaduk, masukkan jagung dan labu kuning.
-            c. Tambahkan air bila diperlukan, masukkan garam lada dan kaldu jamur aduk rata lagi.
-            d. Setelah beras sudah menjadi bubur terakhir masukan semua sayuran aduk rata, koreksi rasa, angkat.
-            ',
+            - 1 mangkuk kemangi, dari 5 ikat kecil kemangi, ambil daun dan pucuk mudanya saja.',
+            'Cook' => '<p>1. Cuci bersih beras,lalu di panci masukkan air, beras, singkong, ubi masak dengan api kecil sampai singkong dan ubi lembut.
+            </p><p>2. Masukkan bawang putih, bawang merah, daun salam dan serai sambil terus diaduk, masukkan jagung dan labu kuning.
+            </p><p>3. Tambahkan air bila diperlukan, masukkan garam lada dan kaldu jamur aduk rata lagi. </p>
+            <p>4. Setelah beras sudah menjadi bubur terakhir masukan semua sayuran aduk rata, koreksi rasa, angkat.</p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'component-2.png',
+            'Cooking_Image' => 'Bubur Manado.jpg',
             'Cooking_Time' => 90,
             'Rating' => '4.0',
             'Total_Rating' => '278',
@@ -160,23 +160,22 @@ class FoodSeeder extends Seeder
             - Nasi putih atau buras.
             - Bawang goreng.
             - Sambel & jeruk nipis.
-            Cara memasak :
-            a. Presto iga sapi hingga empuk dengan air secukupnya,saring ambil kaldunya 1 liter.
-            b. Pindahkan kepanci biasa,masukan iga dan kaldunya lalu tambah air biasa 700 ml atau secukupnya.
-            c. Tumis bumbu halus dengan minyak secukupnya hingga wangi,lalu masukan kedalam panci iga,masukan juga daun salam,daun jeruk,kayu manis dan kelapa sangrai yang dihaluskan,aduk rata,beri gula garam dan kaldu sapi bubuk,didihkan cek rasa.
-            d. Masukan potongan daun seledri dan daun bawang secukupnya didihkan sebentar matikan api.
-            e. Sajikan dimangkok saji lalu taburi bawang goreng.
             ',
+            'Cook' => '<p>1. Presto iga sapi hingga empuk dengan air secukupnya,saring ambil kaldunya 1 liter.
+            </p><p>2. Pindahkan kepanci biasa,masukan iga dan kaldunya lalu tambah air biasa 700 ml atau secukupnya.
+            </p><p>3. Tumis bumbu halus dengan minyak secukupnya hingga wangi,lalu masukan kedalam panci iga,masukan juga daun salam,daun jeruk,kayu manis dan kelapa sangrai yang dihaluskan,aduk rata,beri gula garam dan kaldu sapi bubuk,didihkan cek rasa.
+            </p><p>4. Masukan potongan daun seledri dan daun bawang secukupnya didihkan sebentar matikan api.
+            </p><p>5. Sajikan dimangkok saji lalu taburi bawang goreng.</p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'component-2.png',
+            'Cooking_Image' => 'Sop Konro.jpg',
             'Cooking_Time' => 90,
             'Rating' => '4.7',
             'Total_Rating' => '278',
         ]);
         Food::create([
             'category_id' => 1,
-            'Food_Name' => 'Sate lilit ayam khas Bali',
+            'Food_Name' => 'Sate lilit khas Bali',
             'slug' => 'sate-lilit-ayam-khas-bali',
             'Province_id' => '1',
             'Food_Excerpt' => 'Sate lilit merupakan salah satu kuliner yang dapat kita temukan di Bali dan memiliki cita rasa luar biasa sedap. Seperti namanya, sate lilit adalah sate yang dibuat dengan cara melilitkan bahan baku pada tusuk sate.',
@@ -196,17 +195,16 @@ class FoodSeeder extends Seeder
             - 5 buah cabe rawit (boleh lebih).
             - 1 cm terasi (bakar).
             - secukupnya garam & merica.
-            - 20 batang bambu atau serai.
-            Cara memasak :
-            a. Haluskan bawang merah,bawang putih, kunyit, cabai, kemiri, jahe, kencur, lengkuas dan terasi
-            b. Campurkan ayam giling,telur,tapioka,dan kelapa. Beri garam dan merica secukupnya.
-            c. Tumis bumbu halus hingga harum lalu campurkan kedalam adonan daging ayam. Aduk rata.
-            d. Panaskan Grill Pan dengan api sedang. Ambil sedikit adonan. Masak hingga matang. Lalu cicipi rasanya hingga pas.
-            e. Jika rasa sudah pas. Ambil adonan secukupnya dan lilitkan pada batang Bambu atau Batang serai. Lalu panggang di Grill Pan hingga matang.
-            f. Untuk Sambal matah : iris bawang merah,daun jeruk,cabai,dan batang serai bagian putihnya saja. Beri sejumput garam. panaskan 2 sdm minyak masukkan terasi. goreng hingga terasi hancur bercampur minyak. lalu campurkan pada bahan irisan. Aduk rata, siap dihidangkan.',
+            - 20 batang bambu atau serai.',
+            'Cook' => '<p>1. Haluskan bawang merah,bawang putih, kunyit, cabai, kemiri, jahe, kencur, lengkuas dan terasi
+            </p><p>2. Campurkan ayam giling,telur,tapioka,dan kelapa. Beri garam dan merica secukupnya.
+            </p><p>3. Tumis bumbu halus hingga harum lalu campurkan kedalam adonan daging ayam. Aduk rata.
+            </p><p>4. Panaskan Grill Pan dengan api sedang. Ambil sedikit adonan. Masak hingga matang. Lalu cicipi rasanya hingga pas.
+            </p><p>5. Jika rasa sudah pas. Ambil adonan secukupnya dan lilitkan pada batang Bambu atau Batang serai. Lalu panggang di Grill Pan hingga matang.
+            </p><p>6. Untuk Sambal matah : iris bawang merah,daun jeruk,cabai,dan batang serai bagian putihnya saja. Beri sejumput garam. panaskan 2 sdm minyak masukkan terasi. goreng hingga terasi hancur bercampur minyak. lalu campurkan pada bahan irisan. Aduk rata, siap dihidangkan.</p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'component-2.png',
+            'Cooking_Image' => 'Sate lilit.jpg',
             'Cooking_Time' => 90,
             'Rating' => '4.7',
             'Total_Rating' => '278',
@@ -236,20 +234,20 @@ class FoodSeeder extends Seeder
             - 400 ml santan kental.
             - 1/4 sdt garam.
             - Secukupnya buah nangka dipotong kotak kecil2 ( opsional).
-            Rebus kuah santan hingga mendidih bersama garam dan daun pandan. Matikan api. Masukan potongan nangka.
-            Cara memasak :
-            a. Campur tepung ketan, tepung tapioka dan garam, tuangi air hangat secukupnya sampai adonan lembut dan enak buat dipulung ( kalau terlalu lembek boleh ditambahi tepung ketan lagi).
-            b. Siapkan nampan, taburi tipis2 dengan tepung kanji.
-            c. Ambil secuil adonan bentuk bulat sebesar kelereng. Susun di atas nampan. Lakukan sampai adonan habis
-            d. Masak semua bahan kuah kuah gula merah hingga gula larut dan mendidih.
-            e. Saring lalu masak lagi sampai mendidih.
-            f. Masukkan bola bola ketan. Masak dengan api kecil hingga gula meresap dan warna bola bola ketan berubah kecoklatan.
-            g. Masukkan larutan tepung , aduk pelan sampai kental dan meletup2.
-            h. Jika kurang kental bisa ditambahkan tepung ketan/ tepung beras yang dicairkan lalu dimasak lagi sampai kental.
-            i. Sajikan dengan kuah santan.',
+            Rebus kuah santan hingga mendidih bersama garam dan daun pandan. Matikan api. Masukan potongan nangka.',
+            'Cook' => '
+            <p>1. Campur tepung ketan, tepung tapioka dan garam, tuangi air hangat secukupnya sampai adonan lembut dan enak buat dipulung ( kalau terlalu lembek boleh ditambahi tepung ketan lagi).
+            </p><p>2. Siapkan nampan, taburi tipis2 dengan tepung kanji.
+            </p><p>3. Ambil secuil adonan bentuk bulat sebesar kelereng. Susun di atas nampan. Lakukan sampai adonan habis
+            </p><p>4. Masak semua bahan kuah kuah gula merah hingga gula larut dan mendidih.
+            </p><p>5. Saring lalu masak lagi sampai mendidih.
+            </p><p>6. Masukkan bola bola ketan. Masak dengan api kecil hingga gula meresap dan warna bola bola ketan berubah kecoklatan.
+            </p><p>7. Masukkan larutan tepung , aduk pelan sampai kental dan meletup2.
+            </p><p>8. Jika kurang kental bisa ditambahkan tepung ketan/ tepung beras yang dicairkan lalu dimasak lagi sampai kental.
+            </p><p>9. Sajikan dengan kuah santan.</p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'component-2.png',
+            'Cooking_Image' => 'Candil ketan.jpg',
             'Cooking_Time' => 90,
             'Rating' => '4.7',
             'Total_Rating' => '278',
@@ -275,16 +273,16 @@ class FoodSeeder extends Seeder
             - 1sdt kecap asin
             - 4sdm kecap manis (sesuai selera)
             - 1sdt minyak wijen
-            - Gula,garam,kaldu bubuk secukupnya
-            Cara memasak :
-            a. Panaskan wajan,tumis baceman bawang bersama margarin,bawang bombay dan jahe hingga harum
-            b. Beri air secukupnya,masukkan potongan daging yang telah direbus
-            c. Masukkan ulekan cabe dan bumbui dengan kecap inggris,kecap asin,kecap manis,gula,garam,lada hitam dan juga kaldu bubuk aduk-aduk hingga rata
-            d. Kecilkan api,tunggu hingga bumbu meresap
-            e. Terakhir koreksi rasa,taburi dengan irisan daun bawang dan juga minyak wijen,aduk sebentar lalu angkat dan sajikan bersama nasi panas',
+            - Gula,garam,kaldu bubuk secukupnya.',
+            'Cook' => '
+            <p>1. Panaskan wajan,tumis baceman bawang bersama margarin,bawang bombay dan jahe hingga harum
+            </p><p>2. Beri air secukupnya,masukkan potongan daging yang telah direbus
+            </p><p>3. Masukkan ulekan cabe dan bumbui dengan kecap inggris,kecap asin,kecap manis,gula,garam,lada hitam dan juga kaldu bubuk aduk-aduk hingga rata
+            </p><p>4. Kecilkan api,tunggu hingga bumbu meresap
+            </p><p>5. Terakhir koreksi rasa,taburi dengan irisan daun bawang dan juga minyak wijen,aduk sebentar lalu angkat dan sajikan bersama nasi panas</p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'component-2.png',
+            'Cooking_Image' => 'Kresengan Sapi.jpg',
             'Cooking_Time' => 90,
             'Rating' => '4.7',
             'Total_Rating' => '278',
@@ -321,14 +319,14 @@ class FoodSeeder extends Seeder
             - Tauge pendek/kecambah
             - Telur bebek asin
             - Sambal terasi
-            - Kerupuk ikan
-            Cara memasak :
-            a. Cuci daging sampai bersih, rebus sampai matang. Angkat dan tiriskan daging, lalu potong ukuran dadu. Sisihkan daging dan air kaldunya.
-            b. Panaskan minyak, tumis bumbu halus sampai harum dan matang. Masukkan daging, serai, daun jeruk, air asam, dan garam. Aduk sampai rata dan beraroma.
-            c. Pukul-pukul daging sampai melebar. Goreng dalam minyak panas sebentar, angkat. Taburi dengan bawang goreng',
+            - Kerupuk ikan',
+            'Cook' => '
+            <p>1. Cuci daging sampai bersih, rebus sampai matang. Angkat dan tiriskan daging, lalu potong ukuran dadu. Sisihkan daging dan air kaldunya.
+            </p><p>2. Panaskan minyak, tumis bumbu halus sampai harum dan matang. Masukkan daging, serai, daun jeruk, air asam, dan garam. Aduk sampai rata dan beraroma.
+            </p><p>3. Pukul-pukul daging sampai melebar. Goreng dalam minyak panas sebentar, angkat. Taburi dengan bawang goreng </p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'component-2.png',
+            'Cooking_Image' => 'Rawon Surabaya.jpg',
             'Cooking_Time' => 90,
             'Rating' => '4.7',
             'Total_Rating' => '278',
@@ -351,16 +349,16 @@ class FoodSeeder extends Seeder
             - Jeruk purut diambil kulitnya
             - 2 siung bawang putih
             - Garam
-            - Gula
-            Cara memasak :
-            a. Rebus semua sayuran, sisihkan
-            b. Bakar kelapa hingga kecoklatan dan mengeluarkan aroma
-            c. Untuk bumbu giling cabe, terasi, garam, gula hingga lembut
-            d. Parut bawang putih, kulit jeruk purut, dan kelapa diatas bumbu kemudian aduk jd 1 dengan sayuran
-            e. Sertakan bawang goreng diatasnya jika ada',
+            - Gula',
+            'Cook' => '
+            <p>1. Rebus semua sayuran, sisihkan
+            </p><p>2. Bakar kelapa hingga kecoklatan dan mengeluarkan aroma
+            </p><p>3. Untuk bumbu giling cabe, terasi, garam, gula hingga lembut
+            </p><p>4. Parut bawang putih, kulit jeruk purut, dan kelapa diatas bumbu kemudian aduk jd 1 dengan sayuran
+            </p><p>5. Sertakan bawang goreng diatasnya jika ada </p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'component-2.png',
+            'Cooking_Image' => 'Urap Lombok.jpg',
             'Cooking_Time' => 90,
             'Rating' => '4.7',
             'Total_Rating' => '278',

@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
+{{--     --}}
     <div class="hero-section">
         <div class="hero-isi" data-aos-duration="2000" data-aos="fade-right">
             <div class="hero-text">
@@ -66,14 +67,14 @@
     <div id="menu-containerid"  class="menu-container">
         <div class="menu-header">
         <h1  data-aos-duration="2000" data-aos="fade-right">Choose Your Favorite!</h1>
-        <a  data-aos-duration="2000" data-aos="fade-right" href="/dashboard"><button class="menu-button">See All</button></a>
+        <a  data-aos-duration="2000" data-aos="fade-right" href="/login"><button class="menu-button">See All</button></a>
         </div>
         <div class="menu-body">
             <div class="menu-body-utama">
                 <div class="menu-body-card">
                     <div  data-aos-duration="2000" data-aos="fade-right" class="menu-card">
                         <div class="menu-card-img">
-                            <img src="{{ asset('./storage/assets/'.$foods[0]->image) }}" alt="">
+                            <img src="./storage/assets/{{ $foods[0]->image }}" alt="">
                         </div>
                         <div class="menu-card-text">
                             <div class="card-header">
@@ -117,7 +118,7 @@
                         <div class="menu-card-img">
                             <img src="{{ asset('./storage/assets/'.$food->image) }}" alt="">
                         </div>
-                        <div class="menu-card-text">
+                        <div class="menu-card-text" style="background-image: url">
                             <h3>{{ $food->Food_Name }}</h3>
                             <div class="card-stats">
                                 <ul class="stats-stars">
@@ -171,23 +172,22 @@
     <!-- Top Recipes of The Week -->
     <div id="top-recipes-id" class="top-recipes-container">
         <div class="top-recipes">
-        <h1  data-aos-duration="2000" data-aos="fade-right">Top Recipes of The Week</h1>
+            <h1  data-aos-duration="2000" data-aos="fade-right">Top Recipes of The Week</h1>
 
 
-        <div class="recipes-container">
+            <div class="recipes-container">
 
-            @foreach($lates->slice(0,10) as $FOOD)
-                <div  data-aos-duration="2000" data-aos="fade-right" class="recipes-item">
-                    <p>{{ $count++ }}</p>
-                    <p class="recipes-item-title" >{{ $FOOD->Food_Name }}</p>
-                    <a href="/detail/{{ $FOOD->slug }}">
-                        <button>View More</button>
-                    </a>
-                </div>
-            @endforeach
-        </div>
-
-
+                @foreach($lates->slice(0,10) as $FOOD)
+                    <div  data-aos-duration="2000" data-aos="fade-right" class="recipes-item" style="
+                    background-image:url({{ asset('./storage/assets/'.$FOOD->image) }})">
+                        <p class="recipes-number">{{ $count++ }}</p>
+                        <p class="recipes-item-title" >{{ $FOOD->Food_Name }}</p>
+                        <a href="/detail/{{ $FOOD->slug }}">
+                            <button>View More</button>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </div>
 

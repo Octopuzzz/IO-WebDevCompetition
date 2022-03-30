@@ -73,13 +73,7 @@
 
       <div class="step-cook">
         <h1>How to Cook</h1>
-        <p>1. Siapkan Panci rebus air sampai mendidih</p>
-        <p>1. Siapkan Panci rebus air sampai mendidih</p>
-        <p>1. Siapkan Panci rebus air sampai mendidih</p>
-        <p>1. Siapkan Panci rebus air sampai mendidih</p>
-        <p>1. Siapkan Panci rebus air sampai mendidih</p>
-        <p>1. Siapkan Panci rebus air sampai mendidih</p>
-        <p>1. Siapkan Panci rebus air sampai mendidih</p>
+        {!! $detail->Cook !!}
       </div>
 
       <button class="restaurant-btn"> View Restaurant Nearby </button>
