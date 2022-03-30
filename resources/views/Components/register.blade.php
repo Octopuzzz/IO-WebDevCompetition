@@ -19,14 +19,14 @@
                 <div class="name-row">
                     <div class="login-form-input">
                         <label for="fname">First Name</label>
-                        <input type="text" name="first-name" id="fname" value="{{ old('fname') }}" required autocomplete="name" autofocus>
+                        <input type="text" name="first_name" id="fname" value="{{ old('fname') }}" required autocomplete="name" autofocus>
                     </div>
                     @error('first-name')
                         <div>{{ $message }}</div>
                     @enderror
                     <div class="login-form-input">
                         <label for="lname">Last Name</label>
-                        <input type="text" name="last-name" id="lname" value="{{ old('lname') }}" required autocomplete="name" autofocus>
+                        <input type="text" name="last_name" id="lname" value="{{ old('lname') }}" required autocomplete="name" autofocus>
                     </div>
                     @error('last-name')
                         <div>{{ $message }}</div>
