@@ -15,6 +15,19 @@ class Food extends Model
     protected $guarded = [
         'id'
     ];
+    // public function scopeFilter($query, array $filter)
+    // {
+    //     $query->when($filter['search'] ?? false, function ($query, $search) {
+    //         return $query->where('Food_Name', 'like', '%' . $search . '%')
+    //             ->orWhere('Food_Excerpt', 'like', '%' . $search . '%');
+    //     });
+    //     $query->when(
+    //         $filter['search'] ?? false,
+    //         fn ($query, $search) =>
+    //         $query->where('Food_Name', $search)
+    //             ->orWhere('Food_Excerpt', $search)
+    //     );
+    // }
     public function province()
     {
         return $this->belongsTo('App\Models\Provinces', 'Province_id', 'id');

@@ -2,23 +2,32 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Categories;
 use App\Models\Food;
+use App\Models\Categories;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
 
 class DashboardController extends Controller
 {
-    public function dashboard()
+    public function dashboard(Request $request)
     {
         if (!Auth::check()) {
             return redirect('/');
         }
+        if ($request->has('search')) {
+            $food = Food::where('Food_Name', 'like', '%' . $request->search . '%')
+                ->orWhere('Food_Excerpt', 'like', '%' . $request->search . '%')
+                ->get();
+        } else {
+            $food = Food::latest()->get();
+        }
+        // @dd($food);
         return view('/Components.dashboard', [
             'title' => 'Dashboard',
             'user' => Auth::User(),
-            'foods' => Food::latest()->get(),
+            'foods' => $food,
             'Categories' => Categories::all(),
         ]);
     }

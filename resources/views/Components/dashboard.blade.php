@@ -33,9 +33,11 @@
         <div class="isi-dashboard">
             <div class="dashboard-utama">
                 {{-- search --}}
-                    <div class="search">
-                        <input type="text" placeholder="Search by food name">
-                    </div>
+                    <form class="search" action="/dashboard" method="GET">
+                        @csrf
+                        <input type="search" name = "search" placeholder="Search by food name">
+                        <button></button>
+                    </form>
 
                 {{-- ads --}}
                 <div class="bookmark-ads">
