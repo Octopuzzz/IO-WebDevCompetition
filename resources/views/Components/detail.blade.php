@@ -30,26 +30,26 @@
           <div class="detail-icons">
             <div class="detail-icon">
               <i class="fa-solid fa-star"></i>
-              <p>2.5</p>
+              <p>{{ $detail->Rating }} ({{ $detail->Total_Rating}})</p>
             </div>
             <div class="detail-icon">
               <i class="fa-solid fa-clock"></i>
-              <p>90 mins</p>
+              <p>{{ $detail->Cooking_Time }} mins</p>
             </div>
             <div class="detail-icon">
               <i class="fa-solid fa-cake-candles"></i>
-              <p>Easy</p>
+              <p>{{ $detail->Cooking_Level }}</p>
             </div>
             <div class="detail-icon">
               <i class="fa-solid fa-heart"></i>
-              <p>978</p>
+              <p>{{ $detail->Total_like }}</p>
             </div>
           </div>
         </div>
         <div class="detail-descriptions">
           <div class="detail-description">
             <p>
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+             {{ $detail->Food_Excerpt }}
             </p>
           </div>
           <div class="detail-description-button">
@@ -60,36 +60,14 @@
       <div class="ingredients">
         <h1>Ingredients</h1>
         <div class="ingredients-image">
-          <div class="ingredient-card">
-            <div class="img-ingredient">
-              <img src="/assets/photo.jpg" alt="sayur asem">
-            </div>
-            <p>Daun Melinjo</p>
-          </div>
-          <div class="ingredient-card">
-            <div class="img-ingredient">
-              <img src="/assets/photo.jpg" alt="sayur asem">
-            </div>
-            <p>Daun Melinjo</p>
-          </div>
-          <div class="ingredient-card">
-            <div class="img-ingredient">
-              <img src="/assets/photo.jpg" alt="sayur asem">
-            </div>
-            <p>Daun Melinjo</p>
-          </div>
-          <div class="ingredient-card">
-            <div class="img-ingredient">
-              <img src="/assets/photo.jpg" alt="sayur asem">
-            </div>
-            <p>Daun Melinjo</p>
-          </div>
-
-
-
-
-
-
+            @foreach($detail->PvIngredients as $ingredients)
+            <div class="ingredient-card">
+                <div class="img-ingredient">
+                  <img src="{{ asset('./storage/assets/'.$ingredients->Ingredients->image) }}" alt="sayur asem">
+                </div>
+                    <p>{{ $ingredients->Ingredients->name }}</p>
+              </div>
+            @endforeach
         </div>
       </div>
 

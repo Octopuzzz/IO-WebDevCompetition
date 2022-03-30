@@ -20,11 +20,11 @@ class IngredientSeeder extends Seeder
             'name' => 'Kapulaga'
         ]);
         Ingredient::create([
-            'image' => 'component-2.png',
+            'image' => 'component-3.png',
             'name' => 'Kayu manis'
         ]);
         Ingredient::create([
-            'image' => 'component-3.png',
+            'image' => 'food-1.png',
             'name' => 'Kapulagas'
         ]);
     }

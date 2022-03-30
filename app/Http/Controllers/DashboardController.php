@@ -22,11 +22,11 @@ class DashboardController extends Controller
             'Categories' => Categories::all(),
         ]);
     }
-    public function dashboard_detail(Food $food)
+    public function dashboard_detail(Food $Food)
     {
         return view('/Components.detail', [
             'title' => "Detail",
-            'detail' => $food,
+            'detail' => $Food,
         ]);
     }
     public function getRouteKeyName()
