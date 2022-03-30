@@ -35,5 +35,8 @@ class ProvincesSeeder extends Seeder
         Provinces::create([
             'Name' => 'Sulawesi',
         ]);
+        Provinces::create([
+            'Name' => 'Nusa Tenggara Timur (NTT)',
+        ]);
     }
 }

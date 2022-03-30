@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Food;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Provinces extends Model
 {
@@ -13,6 +14,6 @@ class Provinces extends Model
     ];
     public function Food()
     {
-        return $this->hasOne(Food::class);
+        return $this->hasMany('App\Models\Food','Province_id');
     }
 }

@@ -12,7 +12,7 @@ class Ingredient extends Model
     protected $guarded = ['id'];
     public function PvIngredient()
     {
-        return $this->hasMany(PvIngredient::class);
-        // return $this->hasMany('App\Models\PvIngredient', 'Ingredient_ID');
+        // return $this->hasMany(PvIngredient::class);
+        return $this->hasMany('App\Models\PvIngredient', 'Ingredient_ID');
     }
 }

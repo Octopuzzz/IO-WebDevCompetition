@@ -55,8 +55,8 @@
                                 <img src="./assets/photo.jpg" alt="">
                             </div>
                             <div class="card-atas-text">
-                                <h5 class="card-judul">{{ $food->Food_Name }}</h5>
-                                <span class="card-daerah">{{ $food->Daerah }}</span>
+                                <h5 class="card-judul">{{ Str::limit($food->Food_Name,20)}}</h5>
+                                <span class="card-daerah">{{ $food->province->Name }}</span>
                                 <ul class="card-stars">
                                     <li><i class="fas fa-star"></i></li>
                                     <li><i class="fas fa-star"></i></li>
@@ -78,14 +78,14 @@
                             <div class="card-ingredients">
                                 <span class="ingredients-judul">Ingredients</span>
                                 <ul class="ingredients-isi">
-                                    @foreach($food->PvIngredients as $item)
+                                    @foreach($food->PvIngredients->slice(0,3) as $item)
                                         <li>{{ $item->Ingredients->name }}</li>
                                     @endforeach
                                     {{-- {{ $food->PvIngredients }} --}}
                                 </ul>
                             </div>
                             <div class="button-time">
-                                <a href="/detail"><button>View Detail</button></a>
+                                <a href="/detail/{{ $food->slug }}"><button>View Detail</button></a>
 
                                 <div class="time">
                                     <i class="fas fa-clock"></i>

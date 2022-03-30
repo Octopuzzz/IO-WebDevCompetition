@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use App\Models\Provinces;
 use Illuminate\Database\Seeder;
 use Database\Seeders\FoodSeeder;
 use Database\Seeders\LikeSeeder;
@@ -11,6 +9,7 @@ use Database\Seeders\UserSeeder;
 use Database\Seeders\HistorySeeder;
 use Database\Seeders\BookmarkSeeder;
 use Database\Seeders\CategorySeeder;
+use Database\Seeders\ProvincesSeeder;
 use Database\Seeders\IngredientSeeder;
 use Database\Seeders\PvIngredientSeeder;
 
@@ -33,7 +32,7 @@ class DatabaseSeeder extends Seeder
             HistorySeeder::class,
             LikeSeeder::class,
             BookmarkSeeder::class,
-            // Provinces::class,
+            ProvincesSeeder::class,
         ]);
     }
 }

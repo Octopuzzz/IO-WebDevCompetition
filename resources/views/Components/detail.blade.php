@@ -22,10 +22,10 @@
 
         <div class="detail-attributes">
           <div class="detail-judul">
-            <h1>Sayur Babanci</h1>
+            <h1>{{ $detail->Food_Name }}</h1>
           </div>
           <div class="detail-city">
-            <h3>Jakarta</h3>
+            <h3>{{ $detail->province->Name }}</h3>
           </div>
           <div class="detail-icons">
             <div class="detail-icon">

@@ -18,7 +18,7 @@ class FoodSeeder extends Seeder
     {
         Food::create([
             'category_id' => 1,
-            'Daerah' => 1,
+            'Province_id' => 1,
             'Food_Name' => 'Sayur Babanci',
             'slug' => 'sayur-babanci',
             'Food_Excerpt' => 'Sayur Babanci adalah salah satu hidangan ikonik khas Betawi yang kini mulai langka. Kelangkaan ini disebabkan karena bahan dan rempah-rempah untuk membuat hidangan ini sudah sulit ditemukan di Jakarta.',
@@ -43,7 +43,7 @@ class FoodSeeder extends Seeder
             'category_id' => 2,
             'Food_Name' => 'Soto Padang',
             'slug' => 'soto-paddang',
-            'Daerah' => 2,
+            'Province_id' => 2,
             'Food_Excerpt' => 'Soto Padang adalah hidangan berkuah kaldu sapi dengan bahan irisan daging sapi yang sudah digoreng kering, bihun (mie dari tepung beras), ditambah perkedel kentang dan dihidangkan panas-panas. ',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => 'Bahan :
@@ -89,7 +89,7 @@ class FoodSeeder extends Seeder
             'category_id' => 1,
             'Food_Name' => 'Bubur Manado',
             'slug' => 'bubur-manado',
-            'Daerah' => '3',
+            'Province_id' => '3',
             'Food_Excerpt' => 'Bubur Manado adalah salah satu kuliner khas dari Manado (Sulawesi Utara). Bahan dasar masakan ini adalah beras yang dicampur sayuran seperti kangkung, daun kemangi, ubi merah/ kuning, dan jagung pipil. Disantap dengan hidangan pelengkap seperti ikan tongkol atau ikan asin bersama sambal dabu-dabu.',
             'Recipes_Excerpt' => '
             Bahan:
@@ -131,7 +131,7 @@ class FoodSeeder extends Seeder
             'category_id' => 1,
             'Food_Name' => 'Sop Konro',
             'slug' => 'sup-konro',
-            'Daerah' => '1',
+            'Province_id' => '1',
             'Food_Excerpt' => 'Sup konro adalah masakan sup iga sapi khas Indonesia yang berasal dari tradisi Bugis dan Makassar.[1] Sup ini biasanya dibuat dengan bahan iga sapi atau daging sapi.[1][2] Masakan berkuah warna coklat kehitaman ini biasa dimakan dengan burasa dan ketupat yang dipotong-potong terlebih dahulu.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => 'Bahan :
@@ -178,7 +178,7 @@ class FoodSeeder extends Seeder
             'category_id' => 1,
             'Food_Name' => 'Sate lilit ayam khas Bali',
             'slug' => 'sate-lilit-ayam-khas-bali',
-            'Daerah' => '1',
+            'Province_id' => '1',
             'Food_Excerpt' => 'Sate lilit merupakan salah satu kuliner yang dapat kita temukan di Bali dan memiliki cita rasa luar biasa sedap. Seperti namanya, sate lilit adalah sate yang dibuat dengan cara melilitkan bahan baku pada tusuk sate.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => 'Bahan :
@@ -215,7 +215,7 @@ class FoodSeeder extends Seeder
             'category_id' => 1,
             'Food_Name' => 'Candil ketan',
             'slug' => 'candil-ketan',
-            'Daerah' => '1',
+            'Province_id' => '1',
             'Food_Excerpt' => 'Candil adalah makanan berupa bubur yang terbuat dari tepung ketan, gula merah dan santan. Tepung ketan ditambahkan sedikit tepung kanji dan air dingin dibentuk bulat dan direbus di dalam air gula dan dihidangkan dengan disiram kuah santan.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => '
@@ -258,7 +258,7 @@ class FoodSeeder extends Seeder
             'category_id' => 1,
             'Food_Name' => 'Krengsengan koyo',
             'slug' => 'krengsengan-koyo',
-            'Daerah' => '1',
+            'Province_id' => '1',
             'Food_Excerpt' => 'Krengsengan juga merupakan makanan yang sangat populer di daerah Jawa, mulai dari Jawa Timur, Jawa Tengah, hingga Jogjakarta. Bahan utama dari krengsengan ini adalah daging.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => 'Bahan:
@@ -293,7 +293,7 @@ class FoodSeeder extends Seeder
             'category_id' => 1,
             'Food_Name' => 'Rawon Surabaya',
             'slug' => 'rawon-surabaya',
-            'Daerah' => '4',
+            'Province_id' => '4',
             'Food_Excerpt' => 'Rawon merupakan salah satu masakan khas Jawa Timur khususnya Surabaya. Masakan berkuah ini menggunakan keluak sehingga warnanya hitam. Bagian daging sapi yang biasa untuk masak rawon adalah sengkel dan sadung lamur.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => 'Bahan:
@@ -337,7 +337,7 @@ class FoodSeeder extends Seeder
             'category_id' => 1,
             'Food_Name' => 'Urap khas Lombok Timur',
             'slug' => 'urap-khas-lombok-timur',
-            'Daerah' => '5',
+            'Province_id' => '5',
             'Food_Excerpt' => 'Urap (kadang dieja urab atau disebut jamak urap-urap) (bahasa Jawa: ꦈꦫꦥ꧀) adalah hidangan selada berupa sayuran yang dimasak (direbus) yang dicampur kelapa parut yang dibumbui sebagai pemberi citarasa.[1] Urap lazim ditemukan dalam masakan Indonesia, akan tetapi jika ditelusuri, urap berasal dari khazanah masakan Jawa.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => 'Bahan :

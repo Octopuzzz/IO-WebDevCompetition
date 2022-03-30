@@ -5,9 +5,7 @@ namespace App\Models;
 use App\Models\Like;
 use App\Models\History;
 use App\Models\Bookmark;
-use App\Models\Provinces;
 use App\Models\Categories;
-use App\Models\PvIngredient;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -19,7 +17,7 @@ class Food extends Model
     ];
     public function province()
     {
-        return $this->hasOne(Provinces::class);
+        return $this->belongsTo('App\Models\Provinces', 'Province_id', 'id');
     }
     public function PvIngredients()
     {
