@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('Category_id');
             $table->foreignId('Daerah');
             $table->string('Food_Name');
+            $table->string('slug')->unique();
             $table->longText('Food_Excerpt');
             $table->string('Recipes_Excerpt');
             $table->longText('Recipes');

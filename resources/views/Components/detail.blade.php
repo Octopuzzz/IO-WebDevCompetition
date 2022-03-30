@@ -9,7 +9,6 @@
   <title>{{ $title }}</title>
 </head>
 <body>
-
   <div class="detail">
     <div class="detail-container">
       <div class="x-button">

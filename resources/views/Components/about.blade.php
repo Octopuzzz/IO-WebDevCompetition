@@ -177,15 +177,14 @@
         <div class="recipes-container">
 
             @foreach($lates->slice(0,10) as $FOOD)
-            <div  data-aos-duration="2000" data-aos="fade-right" class="recipes-item">
-                <p>{{ $FOOD->id }}</p>
-                <p class="recipes-item-title" >{{ $FOOD->Food_Name }}</p>
-                <a href="{{ $FOOD->Food_Name }}">
-                    <button>View More</button>
-                </a>
-            </div>
+                <div  data-aos-duration="2000" data-aos="fade-right" class="recipes-item">
+                    <p>{{ $count++ }}</p>
+                    <p class="recipes-item-title" >{{ $FOOD->Food_Name }}</p>
+                    <a href="/detail/{{ $FOOD->slug }}">
+                        <button>View More</button>
+                    </a>
+                </div>
             @endforeach
-
         </div>
 
 

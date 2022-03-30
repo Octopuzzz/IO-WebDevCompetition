@@ -85,7 +85,7 @@
                                 </ul>
                             </div>
                             <div class="button-time">
-                                <a href="/dashboard/detail"><button>View Detail</button></a>
+                                <a href="/detail"><button>View Detail</button></a>
 
                                 <div class="time">
                                     <i class="fas fa-clock"></i>

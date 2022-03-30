@@ -13,6 +13,7 @@ class MenuController extends Controller
             'title' => 'IC Food',
             'foods' => Food::all(),
             'lates' => Food::latest()->get(),
+            'count' => 1,
         ]);
     }
 }

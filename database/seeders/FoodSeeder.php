@@ -20,6 +20,7 @@ class FoodSeeder extends Seeder
             'category_id' => 1,
             'Daerah' => 1,
             'Food_Name' => 'Sayur Babanci',
+            'slug' => 'sayur-babanci',
             'Food_Excerpt' => 'Sayur Babanci adalah salah satu hidangan ikonik khas Betawi yang kini mulai langka. Kelangkaan ini disebabkan karena bahan dan rempah-rempah untuk membuat hidangan ini sudah sulit ditemukan di Jakarta.',
             'Recipes_Excerpt' => '1 ikat daun melinjo',
             'Recipes' => '
@@ -41,6 +42,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 2,
             'Food_Name' => 'Soto Padang',
+            'slug' => 'soto-paddang',
             'Daerah' => 2,
             'Food_Excerpt' => 'Soto Padang adalah hidangan berkuah kaldu sapi dengan bahan irisan daging sapi yang sudah digoreng kering, bihun (mie dari tepung beras), ditambah perkedel kentang dan dihidangkan panas-panas. ',
             'Recipes_Excerpt' => '5 ikat daun pandan',
@@ -86,6 +88,7 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 1,
             'Food_Name' => 'Bubur Manado',
+            'slug' => 'bubur-manado',
             'Daerah' => '3',
             'Food_Excerpt' => 'Bubur Manado adalah salah satu kuliner khas dari Manado (Sulawesi Utara). Bahan dasar masakan ini adalah beras yang dicampur sayuran seperti kangkung, daun kemangi, ubi merah/ kuning, dan jagung pipil. Disantap dengan hidangan pelengkap seperti ikan tongkol atau ikan asin bersama sambal dabu-dabu.',
             'Recipes_Excerpt' => '
@@ -127,8 +130,9 @@ class FoodSeeder extends Seeder
         Food::create([
             'category_id' => 1,
             'Food_Name' => 'Sop Konro',
+            'slug' => 'sup-konro',
             'Daerah' => '1',
-            'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'Food_Excerpt' => 'Sup konro adalah masakan sup iga sapi khas Indonesia yang berasal dari tradisi Bugis dan Makassar.[1] Sup ini biasanya dibuat dengan bahan iga sapi atau daging sapi.[1][2] Masakan berkuah warna coklat kehitaman ini biasa dimakan dengan burasa dan ketupat yang dipotong-potong terlebih dahulu.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => 'Bahan :
             - 1 kg iga sapi.
@@ -172,16 +176,34 @@ class FoodSeeder extends Seeder
         ]);
         Food::create([
             'category_id' => 1,
-            'Food_Name' => 'Kolak surabaya',
+            'Food_Name' => 'Sate lilit ayam khas Bali',
+            'slug' => 'sate-lilit-ayam-khas-bali',
             'Daerah' => '1',
-            'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'Food_Excerpt' => 'Sate lilit merupakan salah satu kuliner yang dapat kita temukan di Bali dan memiliki cita rasa luar biasa sedap. Seperti namanya, sate lilit adalah sate yang dibuat dengan cara melilitkan bahan baku pada tusuk sate.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
-            'Recipes' => '
-            1 ikat daun melinjo
-            2 ikat daun melinjo
-            3 ikat daun melinjo
-            6 ikat daun melinjo
-            ',
+            'Recipes' => 'Bahan :
+            - 300 gr daging ayam (giling).
+            - 100 gr kelapa parut.
+            - 1 butir telur ayam.
+            - 2 sdm tapioka.
+            - 5 siung bawang merah.
+            - 4 siung bawang putih.
+            - 3 biji kemiri (sangrai).
+            - 1 cm kunyit (bakar).
+            - 2 cm kencur.
+            - 1 cm lengkuas.
+            - 1 cm jahe.
+            - 5 buah cabe rawit (boleh lebih).
+            - 1 cm terasi (bakar).
+            - secukupnya garam & merica.
+            - 20 batang bambu atau serai.
+            Cara memasak :
+            a. Haluskan bawang merah,bawang putih, kunyit, cabai, kemiri, jahe, kencur, lengkuas dan terasi
+            b. Campurkan ayam giling,telur,tapioka,dan kelapa. Beri garam dan merica secukupnya.
+            c. Tumis bumbu halus hingga harum lalu campurkan kedalam adonan daging ayam. Aduk rata.
+            d. Panaskan Grill Pan dengan api sedang. Ambil sedikit adonan. Masak hingga matang. Lalu cicipi rasanya hingga pas.
+            e. Jika rasa sudah pas. Ambil adonan secukupnya dan lilitkan pada batang Bambu atau Batang serai. Lalu panggang di Grill Pan hingga matang.
+            f. Untuk Sambal matah : iris bawang merah,daun jeruk,cabai,dan batang serai bagian putihnya saja. Beri sejumput garam. panaskan 2 sdm minyak masukkan terasi. goreng hingga terasi hancur bercampur minyak. lalu campurkan pada bahan irisan. Aduk rata, siap dihidangkan.',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
             'Cooking_Image' => 'component-2.png',
@@ -191,16 +213,40 @@ class FoodSeeder extends Seeder
         ]);
         Food::create([
             'category_id' => 1,
-            'Food_Name' => 'Kolak surabaya',
+            'Food_Name' => 'Candil ketan',
+            'slug' => 'candil-ketan',
             'Daerah' => '1',
-            'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'Food_Excerpt' => 'Candil adalah makanan berupa bubur yang terbuat dari tepung ketan, gula merah dan santan. Tepung ketan ditambahkan sedikit tepung kanji dan air dingin dibentuk bulat dan direbus di dalam air gula dan dihidangkan dengan disiram kuah santan.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
             'Recipes' => '
-            1 ikat daun melinjo
-            2 ikat daun melinjo
-            3 ikat daun melinjo
-            6 ikat daun melinjo
-            ',
+            Bahan :
+            - 200 gr tepung ketan.
+            - 30 g tepung tapioka. Tepung beras atau boleh tepung ketan saja.
+            - 1/3 sdt garam.
+            - secukupnya air hangat sampai adonan bisa dipulung.
+            Bahan kuah :
+            - 150 gula merah, disisir.
+            - 800 ml air.
+            - 2 lembar daun pandan ditali simpul.
+            Bahan larutan pengental :
+            - 1 sdm tepung ketan atau boleh lebih jika suka kuah yang kental.
+            - 1 sdm tepung beras atau boleh lebih jika suka kuah yang kental.
+            - Campur semua bahan dan tambahkan sedikit air, aduk hingga larut dan tidak ada yang bergerindil.
+            Bahan kuah santan :
+            - 400 ml santan kental.
+            - 1/4 sdt garam.
+            - Secukupnya buah nangka dipotong kotak kecil2 ( opsional).
+            Rebus kuah santan hingga mendidih bersama garam dan daun pandan. Matikan api. Masukan potongan nangka.
+            Cara memasak :
+            a. Campur tepung ketan, tepung tapioka dan garam, tuangi air hangat secukupnya sampai adonan lembut dan enak buat dipulung ( kalau terlalu lembek boleh ditambahi tepung ketan lagi).
+            b. Siapkan nampan, taburi tipis2 dengan tepung kanji.
+            c. Ambil secuil adonan bentuk bulat sebesar kelereng. Susun di atas nampan. Lakukan sampai adonan habis
+            d. Masak semua bahan kuah kuah gula merah hingga gula larut dan mendidih.
+            e. Saring lalu masak lagi sampai mendidih.
+            f. Masukkan bola bola ketan. Masak dengan api kecil hingga gula meresap dan warna bola bola ketan berubah kecoklatan.
+            g. Masukkan larutan tepung , aduk pelan sampai kental dan meletup2.
+            h. Jika kurang kental bisa ditambahkan tepung ketan/ tepung beras yang dicairkan lalu dimasak lagi sampai kental.
+            i. Sajikan dengan kuah santan.',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
             'Cooking_Image' => 'component-2.png',
@@ -210,16 +256,32 @@ class FoodSeeder extends Seeder
         ]);
         Food::create([
             'category_id' => 1,
-            'Food_Name' => 'Kolak surabaya',
+            'Food_Name' => 'Krengsengan koyo',
+            'slug' => 'krengsengan-koyo',
             'Daerah' => '1',
-            'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'Food_Excerpt' => 'Krengsengan juga merupakan makanan yang sangat populer di daerah Jawa, mulai dari Jawa Timur, Jawa Tengah, hingga Jogjakarta. Bahan utama dari krengsengan ini adalah daging.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
-            'Recipes' => '
-            1 ikat daun melinjo
-            2 ikat daun melinjo
-            3 ikat daun melinjo
-            6 ikat daun melinjo
-            ',
+            'Recipes' => 'Bahan:
+            - 300gr daging campur (koyor,urat,tetelan) rebus hingga empuk, potong-potong
+            - 1buah bawang bombay,rajang
+            - 1batang daun bawang,rajang
+            Bumbu:
+            - 1sdm margarin
+            - 2sdm baceman bawang
+            - 1ruas kecil jahe,geprek
+            - 1sdt lada hitam (pakai lada putih boleh)
+            - 15cabe rawit (sesuai selera),rebus,lalu haluskan
+            - 1sdm kecap inggris
+            - 1sdt kecap asin
+            - 4sdm kecap manis (sesuai selera)
+            - 1sdt minyak wijen
+            - Gula,garam,kaldu bubuk secukupnya
+            Cara memasak :
+            a. Panaskan wajan,tumis baceman bawang bersama margarin,bawang bombay dan jahe hingga harum
+            b. Beri air secukupnya,masukkan potongan daging yang telah direbus
+            c. Masukkan ulekan cabe dan bumbui dengan kecap inggris,kecap asin,kecap manis,gula,garam,lada hitam dan juga kaldu bubuk aduk-aduk hingga rata
+            d. Kecilkan api,tunggu hingga bumbu meresap
+            e. Terakhir koreksi rasa,taburi dengan irisan daun bawang dan juga minyak wijen,aduk sebentar lalu angkat dan sajikan bersama nasi panas',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
             'Cooking_Image' => 'component-2.png',
@@ -229,16 +291,41 @@ class FoodSeeder extends Seeder
         ]);
         Food::create([
             'category_id' => 1,
-            'Food_Name' => 'Kolak surabaya',
+            'Food_Name' => 'Rawon Surabaya',
+            'slug' => 'rawon-surabaya',
             'Daerah' => '4',
-            'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'Food_Excerpt' => 'Rawon merupakan salah satu masakan khas Jawa Timur khususnya Surabaya. Masakan berkuah ini menggunakan keluak sehingga warnanya hitam. Bagian daging sapi yang biasa untuk masak rawon adalah sengkel dan sadung lamur.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
-            'Recipes' => '
-            1 ikat daun melinjo
-            2 ikat daun melinjo
-            3 ikat daun melinjo
-            6 ikat daun melinjo
-            ',
+            'Recipes' => 'Bahan:
+            - 500 gram daging sapi, bagian sandung lumur
+            - Air untuk merebus daging
+            - 1.500 ml air kaldu sapi
+            - 3 sdm minyak goreng, untuk menumis
+            - 1 sdm garam
+            Haluskan:
+            - 6 siung bawang putih
+            - 4 biji keluak (ambil isinya, lalu rendam dalam air)
+            - 8 buah cabai merah
+            - 2 ibu jari lengkuas
+            - 3 cm kunyit
+            - 2 cm kencur
+            - 2 cm jahe
+            - 2 sdm ketumbar
+            - 1/4 sdt jintan
+            - 1/2 sdt merica butir
+            - 4 lembar daun salam
+            - 2 batang serai, memarkan
+            - 2 mata asam jawa, larutkan dengan 1 sdm air
+            - 5 lembar daun jeruk purut
+            Pelengkap:
+            - Tauge pendek/kecambah
+            - Telur bebek asin
+            - Sambal terasi
+            - Kerupuk ikan
+            Cara memasak :
+            a. Cuci daging sampai bersih, rebus sampai matang. Angkat dan tiriskan daging, lalu potong ukuran dadu. Sisihkan daging dan air kaldunya.
+            b. Panaskan minyak, tumis bumbu halus sampai harum dan matang. Masukkan daging, serai, daun jeruk, air asam, dan garam. Aduk sampai rata dan beraroma.
+            c. Pukul-pukul daging sampai melebar. Goreng dalam minyak panas sebentar, angkat. Taburi dengan bawang goreng',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
             'Cooking_Image' => 'component-2.png',
@@ -248,16 +335,29 @@ class FoodSeeder extends Seeder
         ]);
         Food::create([
             'category_id' => 1,
-            'Food_Name' => 'Kolak surabaya',
+            'Food_Name' => 'Urap khas Lombok Timur',
+            'slug' => 'urap-khas-lombok-timur',
             'Daerah' => '5',
-            'Food_Excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'Food_Excerpt' => 'Urap (kadang dieja urab atau disebut jamak urap-urap) (bahasa Jawa: ꦈꦫꦥ꧀) adalah hidangan selada berupa sayuran yang dimasak (direbus) yang dicampur kelapa parut yang dibumbui sebagai pemberi citarasa.[1] Urap lazim ditemukan dalam masakan Indonesia, akan tetapi jika ditelusuri, urap berasal dari khazanah masakan Jawa.',
             'Recipes_Excerpt' => '5 ikat daun pandan',
-            'Recipes' => '
-            1 ikat daun melinjo
-            2 ikat daun melinjo
-            3 ikat daun melinjo
-            6 ikat daun melinjo
-            ',
+            'Recipes' => 'Bahan :
+            - 1 ikat daun singkong
+            - 5 biji kacang panjang
+            - 1 genggam toge
+            - 3 buah kecipir
+            - 1/2 buah kelapa
+            - 10 buah cabe rawit
+            - 1 sdt Terasi bakar khas lombok
+            - Jeruk purut diambil kulitnya
+            - 2 siung bawang putih
+            - Garam
+            - Gula
+            Cara memasak :
+            a. Rebus semua sayuran, sisihkan
+            b. Bakar kelapa hingga kecoklatan dan mengeluarkan aroma
+            c. Untuk bumbu giling cabe, terasi, garam, gula hingga lembut
+            d. Parut bawang putih, kulit jeruk purut, dan kelapa diatas bumbu kemudian aduk jd 1 dengan sayuran
+            e. Sertakan bawang goreng diatasnya jika ada',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
             'Cooking_Image' => 'component-2.png',
