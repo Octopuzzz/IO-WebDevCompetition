@@ -106,7 +106,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
+                        <a href="/detail/{{ $foods[0]->slug }}" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
+                        <a href="/detail/{{ $food->slug }}" class="card-arrow-button"><i class="fas fa-circle-arrow-right"></i></a>
                     </div>
                 @endforeach
             </div>
