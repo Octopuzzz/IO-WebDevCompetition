@@ -108,3 +108,38 @@ bookmarkIsi.addEventListener('click', function(e){
     }
 
 });
+let dashboardCard = document.querySelector(".dashboard-card");
+let card =Array.from(document.querySelectorAll('.dashboard-card .card'));
+console.log(card);
+// category
+let idCheck = [];
+function category(checkBox){
+    if(checkBox.checked){
+        idCheck.push(checkBox.getAttribute('id'));
+        card = card.map(function(c){
+            for(let i = 0;i<idCheck.length;i++){
+                if(c.getAttribute('id') == idCheck[i]){
+                    return c;
+                }else{
+                    return ''
+                }
+            }
+        });
+        card = card.filter(function(c){
+            return (c == '') ? '' :c
+        })
+        let cardIsi = '';
+        card.forEach(function(c){
+            console.log(c);
+        });
+
+    }
+
+
+}
+
+
+
+
+
+

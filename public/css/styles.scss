@@ -630,8 +630,13 @@ html {
                     border-radius: 10px;
                     color: white;
                     background-color: black;
-                    border: 1px solid black;
+                    border: 2px solid black;
                     font-weight: 500;
+                    cursor: pointer;
+                    &:hover{
+                        color: black;
+                        background-color: white;
+                    }
                 }
             }
             .password {

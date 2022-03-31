@@ -927,8 +927,14 @@ html {
   border-radius: 10px;
   color: white;
   background-color: black;
-  border: 1px solid black;
+  border: 2px solid black;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.login-container .login-form .login-form-body .login-form-input .login-btn:hover {
+  color: black;
+  background-color: white;
 }
 
 .login-container .login-form .login-form-body .password {
