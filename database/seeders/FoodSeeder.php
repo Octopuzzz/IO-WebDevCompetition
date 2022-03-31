@@ -32,13 +32,20 @@ class FoodSeeder extends Seeder
             2 buah kemiri
             1 buah kunyit
             ',
-            'Cook' => 'b',
+            'Cook' => '
+            <p>1. Rebus daging tetelan bersama air hingga matang dan empuk. Angkat, saring. Sisihkan kaldunya.
+            Panaskan minyak. Tumis bumbu 1, daun salam, dan serai hingga harum. Tambahkan gula merah dan garam. Aduk rata. Angkat.
+            </p><p>2. Masukkan bumbu ke dalam kaldu. Panaskan kembali kaldu di atas api kecil. Tuang air kelapa muda dan santan. Masukkan daging dan tetelan.
+            </p><p>3. Masak sambil diaduk perlahan hingga mendidih (jaga agar santan tidak pecah). Masukkan bumbu 2 dan kelapa sangrai.
+            </p><p>4. Masak hingga bumbu meresap. Masukkan daging kelapa muda, aduk rata. Angkat.
+            </p><p>5. Resep Masakan Sayur Babanci Asli Betawi yang Lezat siap disajikan dengan bahan pelengkap.</p>',
             'image' => 'food-1.png',
             'Cooking_Level' => 'Hard',
-            'Cooking_Image' => 'Sayur Babanci.jpg',
+            'Cooking_Image' => 'Sayur-Babanci.jpg',
+            'Cooking_Image2' => 'sayur-babanci.png',
             'Cooking_Time' => 85,
-            'Rating' => '4.5',
-            'Total_Rating' => '978',
+            'Rating' => 4,
+            'Total_Rating' => '178',
         ]);
         Food::create([
             'category_id' => 2,
@@ -79,13 +86,19 @@ class FoodSeeder extends Seeder
             - bawang goreng.
             - kecap.
             - cuka.',
-            'Cook' => 'a',
+            'Cook' => '
+            <p>1. Rebus daging sampai mendidih keluar buihnya, buah buih yang mengapung, masukkan semua bahan cemplung, lanjutkan merebus sampai daging empuk, masukan daun bawang, tunggu layu, matikan kompor, angkat daging, dan tunggu dingin.
+            </p><p>2. Panaskan minyak goreng, tumis bumbu halus sampai wangi, campur bumbu yang sudah ditumis ke dalam air rebusan daging, masak sebentar sampai bumbu dan kaldu menyatu. koreksi rasa.
+            </p><p>3. Iris tipis daging yang sudah direbus, kemudian goreng sampai garing.
+            </p><p>4. Tata sohun, daging didalam mangkok, siram dengan kuah soto, beri kerupuk, perkedel, seledri dan sambal.
+            </p><p>5. Sajikan.',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Medium',
-            'Cooking_Image' => 'Soto Padang.jpg',
+            'Cooking_Image' => 'Soto-Padang.jpg',
+            'Cooking_Image2' => 'soto-padang.png',
             'Cooking_Time' => 90,
-            'Rating' => '4.2',
-            'Total_Rating' => '147',
+            'Rating' => 5,
+            'Total_Rating' => '2',
         ]);
         Food::create([
             'category_id' => 1,
@@ -122,10 +135,11 @@ class FoodSeeder extends Seeder
             <p>4. Setelah beras sudah menjadi bubur terakhir masukan semua sayuran aduk rata, koreksi rasa, angkat.</p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'Bubur Manado.jpg',
+            'Cooking_Image' => 'Bubur-Manado.jpg',
+            'Cooking_Image2' => 'bubur-manado.png',
             'Cooking_Time' => 90,
-            'Rating' => '4.0',
-            'Total_Rating' => '278',
+            'Rating' => 4,
+            'Total_Rating' => '3',
         ]);
         Food::create([
             'category_id' => 1,
@@ -168,10 +182,11 @@ class FoodSeeder extends Seeder
             </p><p>5. Sajikan dimangkok saji lalu taburi bawang goreng.</p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'Sop Konro.jpg',
+            'Cooking_Image' => 'Sop-Konro.jpg',
+            'Cooking_Image2' => 'sop-konro.png',
             'Cooking_Time' => 90,
-            'Rating' => '4.7',
-            'Total_Rating' => '278',
+            'Rating' => 5,
+            'Total_Rating' => '1',
         ]);
         Food::create([
             'category_id' => 1,
@@ -204,9 +219,10 @@ class FoodSeeder extends Seeder
             </p><p>6. Untuk Sambal matah : iris bawang merah,daun jeruk,cabai,dan batang serai bagian putihnya saja. Beri sejumput garam. panaskan 2 sdm minyak masukkan terasi. goreng hingga terasi hancur bercampur minyak. lalu campurkan pada bahan irisan. Aduk rata, siap dihidangkan.</p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'Sate lilit.jpg',
+            'Cooking_Image' => 'Sate-lilit.jpg',
+            'Cooking_Image2' => 'sate-lilit.png',
             'Cooking_Time' => 90,
-            'Rating' => '4.7',
+            'Rating' => 4,
             'Total_Rating' => '278',
         ]);
         Food::create([
@@ -247,10 +263,11 @@ class FoodSeeder extends Seeder
             </p><p>9. Sajikan dengan kuah santan.</p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'Candil ketan.jpg',
+            'Cooking_Image' => 'Candil-ketan.jpg',
+            'Cooking_Image2' => 'candil.ketan.png',
             'Cooking_Time' => 90,
-            'Rating' => '4.7',
-            'Total_Rating' => '278',
+            'Rating' => 0,
+            'Total_Rating' => '0',
         ]);
         Food::create([
             'category_id' => 1,
@@ -282,10 +299,11 @@ class FoodSeeder extends Seeder
             </p><p>5. Terakhir koreksi rasa,taburi dengan irisan daun bawang dan juga minyak wijen,aduk sebentar lalu angkat dan sajikan bersama nasi panas</p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'Kresengan Sapi.jpg',
+            'Cooking_Image' => 'Kresengan-Sapi.jpg',
+            'Cooking_Image2' => 'kresengan-sapi.png',
             'Cooking_Time' => 90,
-            'Rating' => '4.7',
-            'Total_Rating' => '278',
+            'Rating' => 0,
+            'Total_Rating' => '0',
         ]);
         Food::create([
             'category_id' => 1,
@@ -326,10 +344,10 @@ class FoodSeeder extends Seeder
             </p><p>3. Pukul-pukul daging sampai melebar. Goreng dalam minyak panas sebentar, angkat. Taburi dengan bawang goreng </p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'Rawon Surabaya.jpg',
+            'Cooking_Image' => 'Rawon-Surabaya.jpg',
             'Cooking_Time' => 90,
-            'Rating' => '4.7',
-            'Total_Rating' => '278',
+            'Rating' => 3.5,
+            'Total_Rating' => '2',
         ]);
         Food::create([
             'category_id' => 1,
@@ -358,10 +376,10 @@ class FoodSeeder extends Seeder
             </p><p>5. Sertakan bawang goreng diatasnya jika ada </p>',
             'image' => 'component-3.png',
             'Cooking_Level' => 'Easy',
-            'Cooking_Image' => 'Urap Lombok.jpg',
+            'Cooking_Image' => 'Urap-Lombok.jpg',
             'Cooking_Time' => 90,
-            'Rating' => '4.7',
-            'Total_Rating' => '278',
+            'Rating' => 3,
+            'Total_Rating' => '2',
         ]);
     }
 }

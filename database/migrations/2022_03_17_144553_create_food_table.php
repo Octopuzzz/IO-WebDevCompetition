@@ -26,8 +26,9 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('Cooking_Level');
             $table->string('Cooking_Image');
+            $table->string('Cooking_Image2')->nullable();
             $table->integer('Cooking_Time');
-            $table->string('Rating')->nullable();
+            $table->integer('Rating')->default(0);
             $table->integer('Total_Rating')->nullable();
             $table->integer('Total_like')->default(0);
             $table->timestamps();

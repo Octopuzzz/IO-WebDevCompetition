@@ -16,16 +16,88 @@ class IngredientSeeder extends Seeder
     public function run()
     {
         Ingredient::create([
-            'image' => 'component-1.png',
-            'name' => 'Kapulaga'
+            'image' => 'Biji-salak.jpg',
+            'name' => 'Biji Salak'
         ]);
         Ingredient::create([
-            'image' => 'component-3.png',
+            'image' => 'Kayu-Manis.jpg',
             'name' => 'Kayu manis'
         ]);
         Ingredient::create([
-            'image' => 'food-1.png',
+            'image' => 'Bawang-Putih.jpg',
+            'name' => 'Bawang Putih'
+        ]);
+        Ingredient::create([
+            'image' => 'Kapulaga.jpg',
             'name' => 'Kapulaga'
+        ]);
+        Ingredient::create([
+            'image' => 'Cabe.jpg',
+            'name' => 'Cabai'
+        ]);
+        Ingredient::create([
+            'image' => 'Daging-Sapi.jpg',
+            'name' => 'Daging'
+        ]);
+        Ingredient::create([
+            'image' => 'Daun-Salam.jpeg',
+            'name' => 'Daun Salam'
+        ]);
+        Ingredient::create([
+            'image' => 'kerupuk.jpg',
+            'name' => 'Kerupuk'
+        ]);
+        Ingredient::create([
+            'image' => 'ketumbar.jpeg',
+            'name' => 'Ketumbar'
+        ]);
+        Ingredient::create([
+            'image' => 'ketupat.jpeg',
+            'name' => 'Ketupat'
+        ]);
+        Ingredient::create([
+            'image' => 'kol.jpeg',
+            'name' => 'Kol'
+        ]);
+        Ingredient::create([
+            'image' => 'tomat.jpg',
+            'name' => 'Tomat'
+        ]);
+        Ingredient::create([
+            'image' => 'sawi.jpg',
+            'name' => 'Sawi'
+        ]);
+        Ingredient::create([
+            'image' => 'Serai.jpg',
+            'name' => 'Serai'
+        ]);
+        Ingredient::create([
+            'image' => 'telur.jpg',
+            'name' => 'Telur'
+        ]);
+        Ingredient::create([
+            'image' => 'Jahe.jpg',
+            'name' => 'Jahe'
+        ]);
+        Ingredient::create([
+            'image' => 'Bawang-Merah.jpg',
+            'name' => 'Bawang Merah'
+        ]);
+        Ingredient::create([
+            'image' => 'Kacang-Panjang.jpg',
+            'name' => 'Kacang Panjang'
+        ]);
+        Ingredient::create([
+            'image' => 'Toge.jpg',
+            'name' => 'Toge'
+        ]);
+        Ingredient::create([
+            'image' => 'Kelapa.jpg',
+            'name' => 'Kelapa'
+        ]);
+        Ingredient::create([
+            'image' => 'Kecipir.jpg',
+            'name' => 'Kecipir'
         ]);
     }
 }

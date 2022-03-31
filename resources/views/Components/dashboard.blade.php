@@ -19,10 +19,10 @@
                 <ul class="category-isi">
                     @foreach($Categories as $category)
                         <li class="category-isi-item">
-                            <input type="checkbox" id="{{ $category->slug }}" data-nilai="kalimantan">
+                            <input type="checkbox" id="{{ $category->Name }}" data-nilai = "kalimantan">
                             {{-- @if()
                             @endif --}}
-                            <label for="{{ $category->slug }}">{{ $category->category_type }}</label>
+                            <label for="{{ $category->Name }}">{{ $category->Name }}</label>
                         </li>
                     @endforeach
                 </ul>
@@ -36,7 +36,6 @@
                     <form class="search" action="/dashboard" method="GET">
                         @csrf
                         <input type="search" name = "search" placeholder="Search by food name">
-                        <button></button>
                     </form>
 
                 {{-- ads --}}
@@ -51,9 +50,16 @@
                 </div>
                 {{-- card --}}
                 <div class="dashboard-card">
-
                     @foreach($foods as $food)
-                    <div class="card">
+                    <div class="card" id= "{{ $food->province->Name }}">
+                        <div class="bookmark-like">
+                            <div class="bookmark-icon">
+                                <i class="fas fa-bookmark"></i>
+                            </div>
+                            <div class="bookmark-heart">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
                         <div class="card-atas">
                             <div class="card-atas-img">
                                 <img src="{{ asset('./storage/assets/'.$food->Cooking_Image ) }}" alt="">
@@ -62,11 +68,13 @@
                                 <h5 class="card-judul">{{ Str::limit($food->Food_Name,20)}}</h5>
                                 <span class="card-daerah">{{ $food->province->Name }}</span>
                                 <ul class="card-stars">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
+                                    @for($i = 1; $i <= 5; $i++)
+                                        @if($i <= $food->Rating)
+                                            <i class="fas fa-star"></i>
+                                        @else
+                                            <i class="fa-regular fa-star"></i>
+                                        @endif
+                                    @endfor
                                 </ul>
                                 <span class="card-rating">
                                     {{ $food->Rating.' ('.$food->Total_Rating.')'}}
@@ -97,14 +105,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="bookmark-like">
-                            <div class="bookmark-icon">
-                                <i class="fas fa-bookmark"></i>
-                            </div>
-                            <div class="bookmark-heart">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
+
                     </div>
                     @endforeach
 
@@ -117,27 +118,6 @@
                     </div>
                     <h3 class="bookmark-header">Bookmark</h3>
                     <div class="bookmark-isi">
-                        <a href="">
-                            <div class="bookmark-isi-item">
-                                <div class="bookmark-img">
-                                    <img src="assets/food-1.png" alt="">
-                                </div>
-                                <div class="bookmark-text">
-                                    <h6>Soto Kambing</h6>
-                                    <ul class="bookmark-stars">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-
-                                    </ul>
-                                </div>
-                                <div class="bookmark-trash">
-                                    <i class="fas fa-trash"></i>
-                                </div>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>

@@ -404,11 +404,14 @@ html {
 
 .menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-img {
   position: absolute;
-  left: -8rem;
+  left: -6rem;
 }
 
 .menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-img img {
-  max-width: 24rem;
+  max-width: 20rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .menu-container .menu-body .menu-body-utama .menu-body-card .menu-card .menu-card-text {
@@ -511,7 +514,10 @@ html {
 }
 
 .menu-container .menu-body-sekunder .menu-card .menu-card-img img {
-  max-width: 10rem;
+  max-width: 8rem;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
 }
 
 .menu-container .menu-body-sekunder .menu-card .menu-card-text {
@@ -596,6 +602,10 @@ html {
   margin-bottom: 5px;
 }
 
+.easy-step-container .easy-step-card .card-text {
+  padding: 10px;
+}
+
 .top-recipes-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -669,9 +679,12 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
-.top-recipes-container .top-recipes .recipes-container .recipes-item:after {
+.top-recipes-container .top-recipes .recipes-container .recipes-item::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -681,6 +694,12 @@ html {
   background: rgba(0, 0, 0, 0.6);
   opacity: 0.5;
   border-radius: 10px;
+}
+
+.top-recipes-container .top-recipes .recipes-container .recipes-item:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: 100px;
 }
 
 .top-recipes-container .top-recipes .recipes-container .recipes-item .recipes-number {
@@ -714,6 +733,11 @@ html {
   padding: 5px 20px;
   border-radius: 15px;
   border: 0px;
+  cursor: pointer;
+}
+
+.top-recipes-container .top-recipes .recipes-container .recipes-item a button:hover {
+  background-color: #a5a5a5;
 }
 
 .form-container {
@@ -1525,7 +1549,7 @@ html {
           flex: 1;
   border-radius: 5rem;
   font-size: 1rem;
-  color: #f6f6f6;
+  color: black;
   border: none;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
@@ -1712,11 +1736,16 @@ html {
 }
 
 .dashboard .isi-dashboard .dashboard-utama .dashboard-card .card .bookmark-like {
-  position: absolute;
-  right: 5px;
-  top: 5px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 5px 0;
+  right: 5px;
+  top: 5px;
   display: flex;
 }
 
@@ -1777,6 +1806,7 @@ html {
 }
 
 .dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi {
+  overflow: auto;
   padding: 1rem;
 }
 
@@ -1808,10 +1838,12 @@ html {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding: 6px;
 }
 
 .dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item .bookmark-img img {
   width: 100%;
+  border-radius: 25px;
 }
 
 .dashboard .isi-dashboard .dashboard-bookmark .bookmark-container .bookmark-isi a .bookmark-isi-item .bookmark-text {

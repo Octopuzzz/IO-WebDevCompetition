@@ -247,9 +247,17 @@ html {
                     .menu-card-img {
                         position: absolute;
                         img {
-                            max-width: 24rem;
+                            max-width: 20rem;
+                            border-radius: 50%;
+                            box-shadow:
+                            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                            0 12.5px 10px rgba(0, 0, 0, 0.06),
+                            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                            0 100px 80px rgba(0, 0, 0, 0.12);
                         }
-                        left: -8rem;
+                        left: -6rem;
                     }
                     .menu-card-text {
                         width: 80%;
@@ -320,7 +328,17 @@ html {
             .menu-card-img {
                 position: absolute;
                 img {
-                    max-width: 10rem;
+                    max-width: 8rem;
+                    box-shadow:
+                    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                    0 12.5px 10px rgba(0, 0, 0, 0.06),
+                    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                    0 100px 80px rgba(0, 0, 0, 0.12)
+                    ;
+
+                    border-radius: 50%;
                 }
                 left: -1.5rem;
                 top: -1rem;
@@ -386,6 +404,10 @@ html {
             font-weight: 600;
             margin-bottom: 5px;
         }
+
+        .card-text{
+            padding:10px;
+        }
     }
 }
 
@@ -423,9 +445,9 @@ html {
                 background-repeat: no-repeat;
                 background-size: cover;
                 color: white;
-                transition: 0.5s;
+                transition: all 0.5s ease;
                 cursor: pointer;
-                &:after {
+                &::after {
                     content: "";
                     position: absolute;
                     width: 100%;
@@ -437,6 +459,7 @@ html {
                     border-radius: 10px;
                 }
                 &:hover {
+                    transition: all 0.5s ease;
                     height: 100px;
                 }
                 .recipes-number {
@@ -460,8 +483,9 @@ html {
                         padding: 5px 20px;
                         border-radius: 15px;
                         border: 0px;
-                        &:hover {
-                            background: rgb(0, 0, 0, 0.1);
+                        cursor: pointer;
+                        &:hover{
+                            background-color: rgb(165, 165, 165);
                         }
                     }
                 }
@@ -1134,7 +1158,7 @@ html {
                     flex: 1;
                     border-radius: 5rem;
                     font-size: 1rem;
-                    color: #f6f6f6;
+                    color: black;
                     border: none;
                     box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.4);
                 }
@@ -1253,7 +1277,10 @@ html {
                         }
                     }
                     .bookmark-like {
-                        position: absolute;
+                        position: relative;
+                        display: flex;
+                        justify-content:flex-end;
+                        padding: 5px 0;
                         right: 5px;
                         top: 5px;
                         display: flex;
@@ -1293,6 +1320,7 @@ html {
                     font-size: 2rem;
                 }
                 .bookmark-isi {
+                    overflow: auto;
                     padding: 1rem;
                     a {
                         text-decoration: none;
@@ -1307,8 +1335,10 @@ html {
                             padding: 1rem;
                             .bookmark-img {
                                 flex: 1;
+                                padding: 6px;
                                 img {
                                     width: 100%;
+                                    border-radius:25px;
                                 }
                             }
                             .bookmark-text {

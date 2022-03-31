@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Food;
-use App\Models\Categories;
+use App\Models\Provinces;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -23,12 +23,11 @@ class DashboardController extends Controller
         } else {
             $food = Food::latest()->get();
         }
-        // @dd($food);
         return view('/Components.dashboard', [
             'title' => 'Dashboard',
             'user' => Auth::User(),
             'foods' => $food,
-            'Categories' => Categories::all(),
+            'Categories' => Provinces::all(),
         ]);
     }
     public function dashboard_detail(Food $Food)

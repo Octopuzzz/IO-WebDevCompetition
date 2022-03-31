@@ -62,19 +62,22 @@
 
 
   {{-- menu  --}}
-
   @if($foods)
     <div id="menu-containerid"  class="menu-container">
         <div class="menu-header">
         <h1  data-aos-duration="2000" data-aos="fade-right">Choose Your Favorite!</h1>
+        @guest
         <a  data-aos-duration="2000" data-aos="fade-right" href="/login"><button class="menu-button">See All</button></a>
+        @else
+        <a  data-aos-duration="2000" data-aos="fade-right" href="/dashboard"><button class="menu-button">See All</button></a>
+        @endguest
         </div>
         <div class="menu-body">
             <div class="menu-body-utama">
                 <div class="menu-body-card">
                     <div  data-aos-duration="2000" data-aos="fade-right" class="menu-card">
                         <div class="menu-card-img">
-                            <img src="./storage/assets/{{ $foods[0]->image }}" alt="">
+                            <img src="{{ asset('./storage/assets/'.$foods[0]->Cooking_Image2) }}" alt="">
                         </div>
                         <div class="menu-card-text">
                             <div class="card-header">
@@ -85,11 +88,13 @@
 
                                 <div class="card-stats">
                                     <ul class="stats-stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        @for($i = 1; $i <= 5; $i++)
+                                            @if($i <= $foods[0]->Rating)
+                                                <i class="fas fa-star"></i>
+                                            @else
+                                                <i class="fa-regular fa-star"></i>
+                                            @endif
+                                        @endfor
                                     </ul>
                                     <div class="stats-rating">
                                         {{ $foods[0]->Rating.' ('.$foods[0]->Total_Rating.')'}}
@@ -116,17 +121,19 @@
                 @foreach($foods->slice(1,4) as $food)
                     <div  data-aos-duration="2000" data-aos="fade-right" class="menu-card">
                         <div class="menu-card-img">
-                            <img src="{{ asset('./storage/assets/'.$food->image) }}" alt="">
+                            <img src="{{ asset('./storage/assets/'.$food->Cooking_Image2) }}" alt="">
                         </div>
                         <div class="menu-card-text" style="background-image: url">
                             <h3>{{ $food->Food_Name }}</h3>
                             <div class="card-stats">
                                 <ul class="stats-stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                                @for($i = 1; $i <= 5; $i++)
+                                    @if($i <= $food->Rating)
+                                        <i class="fas fa-star"></i>
+                                    @else
+                                    <i class="fa-regular fa-star"></i>
+                                    @endif
+                                @endfor
                                 </ul>
                                 <div class="stats-rating">
                                     {{ $food->Rating.' ('.$food->Total_Rating.')'}}
@@ -146,26 +153,26 @@
 
         <div class="easy-step-card">
             <div class="icon-container">
-                <img class="w-100" src="assets/component-1.png" alt="">
+                <img class="w-100" src="{{ asset('./storage/assets/component-3.png') }}" alt="">
             </div>
             <p class="card-title">Choose Your Favorite</p>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+            <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
         </div>
 
         <div class="easy-step-card">
             <div class="icon-container">
-                <img class="w-100" src="assets/component-1.png" alt="">
+                <img class="w-100" src="{{ asset('./storage/assets/component-1.png') }}" alt="">
             </div>
             <p class="card-title">Follow the Recipe</p>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+            <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
         </div>
 
         <div class="easy-step-card">
             <div class="icon-container">
-                <img class="w-100" src="assets/component-1.png" alt="">
+                <img class="w-100" src="{{ asset('./storage/assets/component-2.png') }}" alt="">
             </div>
             <p class="card-title">Enjoy Your Food</p>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+            <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
         </div>
     </div>
 
@@ -173,19 +180,19 @@
     <div id="top-recipes-id" class="top-recipes-container">
         <div class="top-recipes">
             <h1  data-aos-duration="2000" data-aos="fade-right">Top Recipes of The Week</h1>
-
-
             <div class="recipes-container">
-
                 @foreach($lates->slice(0,10) as $FOOD)
+
                     <div  data-aos-duration="2000" data-aos="fade-right" class="recipes-item" style="
-                    background-image:url({{ asset('./storage/assets/'.$FOOD->image) }})">
+                    background-image:url({{ asset('./storage/assets/'.$FOOD->Cooking_Image) }});">
                         <p class="recipes-number">{{ $count++ }}</p>
                         <p class="recipes-item-title" >{{ $FOOD->Food_Name }}</p>
                         <a href="/detail/{{ $FOOD->slug }}">
                             <button>View More</button>
                         </a>
                     </div>
+
+
                 @endforeach
             </div>
         </div>

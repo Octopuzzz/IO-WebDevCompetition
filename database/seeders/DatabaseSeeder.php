@@ -24,11 +24,11 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call([
+            IngredientSeeder::class,
             UserSeeder::class,
             FoodSeeder::class,
             CategorySeeder::class,
             PvIngredientSeeder::class,
-            IngredientSeeder::class,
             HistorySeeder::class,
             LikeSeeder::class,
             BookmarkSeeder::class,

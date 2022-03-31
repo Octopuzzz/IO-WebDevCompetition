@@ -17,7 +17,7 @@
 
       <div class="header-detail">
         <div class="detail-card-image">
-          <img src="/assets/photo.jpg" alt="sayur asem">
+          <img src="{{ asset('./storage/assets/'.$detail->Cooking_Image) }}" alt="sayur asem">
         </div>
 
         <div class="detail-attributes">
